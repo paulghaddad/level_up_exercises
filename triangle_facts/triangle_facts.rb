@@ -7,13 +7,26 @@ class Triangle
     @angles = triangle_angles(@side_1, @side_2, @side_3)
   end
 
-  def triangle_angles(*sides) # Return array of the triangle's angles, in radians
-    numerator = sides.inject(0.0) { |sum, side| sum + side**2 }
-    denominator = sides.inject(1.0) { |product, side| product * side } * 2
-    sides.map do |side|
-      angles_in_radians = Math.acos((numerator - 2 * side**2) / (denominator / side))
-      radians_to_degrees(angles_in_radians)
-    end
+  def triangle_angles(*sides)
+    [angle_1(*sides), angle_2(*sides), angle_3(*sides)]
+  end
+
+  def angle_1(*sides)
+    numerator = @side_2**2 + @side_3**2 - @side_1**2
+    denominator = 2.0 * @side_2 * @side_3
+    radians_to_degrees(Math.acos(numerator / denominator))
+  end
+
+  def angle_2(*sides)
+    numerator = @side_1**2 + @side_3**2 - @side_2**2
+    denominator = 2.0 * @side_1 * @side_3
+    radians_to_degrees(Math.acos(numerator / denominator))
+  end
+
+  def angle_3(*sides)
+    numerator = @side_1**2 + @side_2**2 - @side_3**2
+    denominator = 2.0 * @side_1 * @side_2
+    radians_to_degrees(Math.acos(numerator / denominator))
   end
 
   def radians_to_degrees(radians)
