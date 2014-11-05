@@ -1,5 +1,5 @@
-require 'dinosaur'
-require 'filters'
+require_relative 'dinosaur'
+require_relative 'filters'
 
 class Catalog
   include Filters
