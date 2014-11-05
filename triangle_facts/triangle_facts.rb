@@ -61,10 +61,8 @@ class Triangle
       "This triangle is equilateral!"
     elsif isosceles?
       "This triangle is isosceles! Also, that word is hard to type."
-    elsif scalene?
-      "This triangle is scalene and mathematically boring."
     else
-      "This is not a valid triangle."
+      "This triangle is scalene and mathematically boring."
     end
   end
 end
