@@ -10,7 +10,7 @@ class Robot
 
   def initialize(args = {})
     @@registry ||= []
-    @name_generator = args[:name_generator] || method(:default_name)
+    @name_generator = args[:name_generator] || method(:random_name)
     @name = generate_name
     assert_valid_name
     add_name_to_registry
@@ -20,8 +20,8 @@ class Robot
     @name_generator.call
   end
 
-  def default_name
-    "#{character * 2}#{number * 3}"
+  def random_name
+    "#{random_character * 2}#{random_number * 3}"
   end
 
   def assert_valid_name
@@ -35,14 +35,12 @@ class Robot
 
   private
 
-  def character
-    generate_char = -> { ('A'..'Z').to_a.sample }
-    generate_char.call
+  def random_character
+    ('A'..'Z').to_a.sample
   end
 
-  def number
-    generate_num = -> { rand(10).to_s }
-    generate_num.call
+  def random_number
+    rand(10).to_s
   end
 end
 
