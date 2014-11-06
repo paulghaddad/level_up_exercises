@@ -5,14 +5,19 @@ app = App.new("dinosaur_catalog")
 
 EXIT_TERMS = ['quit', 'exit']
 
+USER_FILE_IMPORT = %Q%\nPlease enter the filename of the CSV to import\n\n\
+Enter 'quit' or 'exit' to leave the program.\n\n>> %
+
 if ARGV.size == 1
   csv_file = ARGV.shift
   app.launch!(csv_file)
 else
-  puts "\nPlease enter the filename of the CSV to import\n\n"
-  puts "Enter 'quit' or 'exit' to leave the program.\n\n"
-  print ">>  "
+  print USER_FILE_IMPORT
   user_file = gets.chomp
+  launch_app(user_file)
+end
+
+def launch_app(user_input)
   if EXIT_TERMS.include? user_file
     puts "\n\nExiting.\n\n"
     exit!

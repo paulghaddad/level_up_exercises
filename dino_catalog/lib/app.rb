@@ -4,7 +4,6 @@ require 'active_support/core_ext'
 require 'active_support/inflector/inflections'
 require_relative 'display'
 require_relative 'json_export'
-require_relative 'build_csv'
 require_relative 'csv_modifier'
 require_relative 'user_prompts'
 require_relative 'user_processing'
@@ -24,7 +23,7 @@ class App
   def launch!(csv_filename=nil)
     @csv_filename = csv_filename
     normalize_csv_file(csv_filename)
-    @catalog = create_catalog("normalized_csv_file.csv")
+    @catalog = create_catalog(CsvModifier::NORMALIZED_CSV_FILENAME)
     obtain_user_filters
   end
 
