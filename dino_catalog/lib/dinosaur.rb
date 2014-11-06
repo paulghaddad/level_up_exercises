@@ -1,5 +1,4 @@
 class Dinosaur
-
   BIG_DINOSAUR_LBS = 2
   POUNDS_PER_TON = 2000.0
 
@@ -29,8 +28,7 @@ class Dinosaur
 
   def to_hash
     hash = {}
-    instance_variables.each {|var| hash[var.to_s.delete("@")] = instance_variable_get(var) }
+    instance_variables.each { |var| hash[var.to_s.delete("@")] = instance_variable_get(var) }
     hash
   end
-
 end

@@ -4,7 +4,6 @@ require 'active_support/core_ext'
 require 'active_support/inflector/inflections'
 require_relative 'display'
 require_relative 'json_export'
-require_relative 'option_parser'
 require_relative 'build_csv'
 require_relative 'csv_modifier'
 require_relative 'user_prompts'
@@ -44,7 +43,7 @@ class App
 
   def print_search_summary(search_results)
     puts "\n"
-    search_results.each { |dinosaur| puts "#{dinosaur.name}"}
+    search_results.each { |dinosaur| puts "#{dinosaur.name}" }
     puts "\n"
   end
 end

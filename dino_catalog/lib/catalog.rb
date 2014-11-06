@@ -20,6 +20,7 @@ class Catalog
 
   def create_dinosaur_entry(name, attributes)
     Dinosaur.new(name, attributes)
+
   end
 
   def self.from_array(array)
@@ -27,5 +28,4 @@ class Catalog
     catalog.instance_variable_set(:@dinosaurs, array)
     catalog
   end
-
 end

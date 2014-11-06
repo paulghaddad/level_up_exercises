@@ -1,13 +1,12 @@
 module Filters
-
   CARNIVORES = ['Carnivore', 'Insectivore', 'Piscivore']
 
   def filter_bipeds(biped_terms)
-    dinosaurs.select { |dinosaur| biped_terms.include? dinosaur.walking.downcase }
+    dinosaurs.select { |dinosaur| biped_terms.include?(dinosaur.walking.downcase) }
   end
 
   def filter_carnivores(carnivore_terms)
-    dinosaurs.select { |dinosaur| CARNIVORES.include?(dinosaur.diet) }
+    dinosaurs.select { |dinosaur| carnivore_terms.include?(dinosaur.diet.downcase) if dinosaur.diet }
   end
 
   def filter_periods(period_terms)
@@ -17,11 +16,10 @@ module Filters
 
   def filter_sizes(size_terms)
     case
-    when size_terms.include?('big')
-      dinosaurs.select { |dinosaur| dinosaur.big? }
-    when size_terms.include?('small')
-      dinosaurs.select { |dinosaur| dinosaur.small? }
+      when size_terms.include?('big')
+        dinosaurs.select { |dinosaur| dinosaur.big? }
+      when size_terms.include?('small')
+        dinosaurs.select { |dinosaur| dinosaur.small? }
     end
   end
-
 end

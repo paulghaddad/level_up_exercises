@@ -1,18 +1,17 @@
 require 'csv'
 
 module CsvModifier
-
-  CsV_FILE_NAME = "normalized_csv_file.csv"
+  CSV_FILE_NAME = "normalized_csv_file.csv"
 
   @@alias_table = {
     'Genus' => 'Name',
     'Carnivore' => 'Diet',
-    'Weight' => 'Weight_in_lbs'
+    'Weight' => 'Weight_in_lbs',
   }
 
   def normalize_csv_headers(old_csv_file)
     new_headers = replace_header_with_alias(old_csv_file)
-    CSV.open(CsV_FILE_NAME, 'w') do |csv|
+    CSV.open(CSV_FILE_NAME, 'w') do |csv|
       csv << new_headers
       CSV.read(old_csv_file, headers: true).each do |row|
         row['Carnivore'] = 'Carnivore' if row['Carnivore'] == 'Yes'
@@ -34,5 +33,4 @@ module CsvModifier
     end
     new_header_row
   end
-
 end

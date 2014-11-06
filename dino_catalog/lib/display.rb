@@ -1,5 +1,4 @@
 module Display
-
   PADDING = 20
 
   HEADER_NAMES = ["Name", "Period", "Continent", "Diet", "Weight (lbs)", "Walking", "Description"]
@@ -56,5 +55,4 @@ module Display
   def print_header
     HEADER_NAMES.each { |header| print header.center(PADDING) }
   end
-
 end
