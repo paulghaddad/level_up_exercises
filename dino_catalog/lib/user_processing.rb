@@ -3,15 +3,18 @@ module UserProcessing
     bipeds: /biped/,
     carnivores: /carnivore|insectivore|piscivore/,
     periods: /cretaceous|permian|jurassic|oxfordian|albian|triassic/,
-    sizes: /big|small/
+    sizes: /big|small/,
   }
+
+  EXIT_TERMS = ['quit', 'exit']
 
   def obtain_user_filters
     @filtered_dinosaurs = nil
     print UserPrompts::USER_SEARCH_PROMPT
     print '> '
     user_input = gets.chomp.downcase
-    exit! if user_input == 'exit' || user_input == 'quit'
+    puts
+    exit! if EXIT_TERMS.include? user_input
     search_terms = get_user_search_terms(user_input)
     @filtered_dinosaurs = filter_results(@catalog, search_terms)
     puts "\nYour search resulted in #{@filtered_dinosaurs.size} dinosaurs:"
@@ -31,12 +34,12 @@ module UserProcessing
     print UserPrompts::USER_PROCESSING_PROMPT
     print '> '
     user_input = gets.chomp.downcase
-    exit! if user_input == 'exit' || user_input == 'quit'
+    exit! if EXIT_TERMS.include? user_input
     user_actions(user_input)
   end
 
   def user_actions(input)
-    exit! if input == 'exit' || input == 'quit'
+    exit! EXIT_TERMS.include? user_input
     if input == 'print'
       print_dinosaur_set(@filtered_dinosaurs)
       user_processing(@filtered_dinosaurs)

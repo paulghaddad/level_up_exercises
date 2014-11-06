@@ -20,7 +20,6 @@ class Catalog
 
   def create_dinosaur_entry(name, attributes)
     Dinosaur.new(name, attributes)
-
   end
 
   def self.from_array(array)

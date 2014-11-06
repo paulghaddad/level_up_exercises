@@ -4,7 +4,7 @@ module Filters
   end
 
   def filter_carnivores(carnivore_terms)
-    dinosaurs.select { |dinosaur| carnivore_terms.include?(dinosaur.diet.downcase) if dinosaur.diet }
+    dinosaurs.select { |dinosaur| carnivore_terms.include?(dinosaur.diet.downcase) }
   end
 
   def filter_periods(period_terms)
@@ -14,10 +14,8 @@ module Filters
 
   def filter_sizes(size_terms)
     case
-      when size_terms.include?('big')
-        dinosaurs.select { |dinosaur| dinosaur.big? }
-      when size_terms.include?('small')
-        dinosaurs.select { |dinosaur| dinosaur.small? }
+      when size_terms.include?('big') then dinosaurs.select(&:big?)
+      when size_terms.include?('small') then dinosaurs.select(&:small?)
     end
   end
 end

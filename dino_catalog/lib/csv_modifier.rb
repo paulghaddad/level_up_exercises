@@ -3,7 +3,7 @@ require 'csv'
 module CsvModifier
   CSV_FILE_NAME = "normalized_csv_file.csv"
 
-  @@alias_table = {
+  ALIAS_TABLE = {
     'Genus' => 'Name',
     'Carnivore' => 'Diet',
     'Weight' => 'Weight_in_lbs',
@@ -15,7 +15,7 @@ module CsvModifier
       csv << new_headers
       CSV.read(old_csv_file, headers: true).each do |row|
         row['Carnivore'] = 'Carnivore' if row['Carnivore'] == 'Yes'
-        row['Carnivore'] = nil if row['Carnivore'] == 'No'
+        row['Carnivore'] = 'No' if row['Carnivore'] == 'No'
         csv.puts row
       end
     end
@@ -25,8 +25,8 @@ module CsvModifier
     header_row = CSV.read(csv_file, headers: true).headers
     new_header_row = []
     header_row.each do |column_name|
-      if @@alias_table[column_name]
-        new_header_row << @@alias_table[column_name]
+      if ALIAS_TABLE[column_name]
+        new_header_row << ALIAS_TABLE[column_name]
       else
         new_header_row << column_name
       end
