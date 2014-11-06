@@ -1,5 +1,4 @@
 module UserProcessing
-
   SEARCH_REGEX = {
     bipeds: /biped/,
     carnivores: /carnivore|insectivore|piscivore/,
@@ -17,7 +16,7 @@ module UserProcessing
     @filtered_dinosaurs = filter_results(@catalog, search_terms)
     puts "\nYour search resulted in #{@filtered_dinosaurs.size} dinosaurs:"
     print_search_summary(@filtered_dinosaurs)
-    user_processing(@filtered_dinosaurs)
+    user_processing
   end
 
   def get_user_search_terms(phrase)
@@ -28,7 +27,7 @@ module UserProcessing
     search_terms
   end
 
-  def user_processing(dinosaurs)
+  def user_processing
     print UserPrompts::USER_PROCESSING_PROMPT
     print '> '
     user_input = gets.chomp.downcase
@@ -52,5 +51,4 @@ module UserProcessing
       user_processing(@filtered_dinosaurs)
     end
   end
-
 end

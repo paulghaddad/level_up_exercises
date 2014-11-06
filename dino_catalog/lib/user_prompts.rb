@@ -1,5 +1,4 @@
 module UserPrompts
-
   USER_SEARCH_PROMPT = <<-HEREDOC.strip_heredoc
 
       What would you like to do?\n
@@ -19,5 +18,4 @@ module UserPrompts
         Enter 'Search' to perform another search.\n
       Otherwise, to exit this program, enter 'quit'.\n
       HEREDOC
-
 end
