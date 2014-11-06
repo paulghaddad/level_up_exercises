@@ -9,7 +9,6 @@ require_relative 'user_prompts'
 require_relative 'user_processing'
 
 class App
-  include BuildCsv
   include CsvModifier
   include Filters
   include Display
