@@ -22,7 +22,7 @@ class App
     @app_name = name
   end
 
-  def launch!(csv_filename=nil, user_hash_input=nil)
+  def launch!(csv_filename=nil)
     @csv_filename = csv_filename
     normalize_csv_file(csv_filename)
     @catalog = create_catalog("normalized_csv_file.csv")
@@ -47,14 +47,4 @@ class App
     search_results.each { |dinosaur| puts "#{dinosaur.name}"}
     puts "\n"
   end
-
-  # def direct_user_input_search(search_terms)
-  #   @filtered_dinosaurs = nil
-  #   @filtered_dinosaurs = filter_results(@catalog, search_terms)
-  #   puts "\nYour search resulted in #{@filtered_dinosaurs.size} dinosaurs:"
-  #   print_search_summary(@filtered_dinosaurs)
-  #   user_processing(@filtered_dinosaurs)
-  # end
-  # User hash input to be implemented in a later iteration
-
 end
