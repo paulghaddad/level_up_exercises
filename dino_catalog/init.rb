@@ -14,15 +14,15 @@ if ARGV.size == 1
 else
   print USER_FILE_IMPORT
   user_file = gets.chomp
-  launch_app(user_file)
+  create_app(user_file)
 end
 
-def launch_app(user_input)
-  if EXIT_TERMS.include? user_file
+def create_app(file)
+  if EXIT_TERMS.include?(file)
     puts "\n\nExiting.\n\n"
     exit!
   else
     puts "\nFile Found!\n"
-    app.launch!(user_file)
+    app.launch!(file)
   end
 end
