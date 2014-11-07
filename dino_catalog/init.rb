@@ -8,7 +8,7 @@ Enter 'quit' or 'exit' to leave the program.\n\n>> %
 
 if ARGV.size == 1
   csv_file = ARGV.shift
-  app.launch!(csv_file)
+  app.launch_app!(csv_file)
 else
   print USER_FILE_IMPORT
   user_file = gets.chomp

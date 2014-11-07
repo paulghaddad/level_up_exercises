@@ -27,11 +27,11 @@ class App
       exit!
     else
       puts "\nFile Found!\n"
-      launch!(file)
+      launch_app!(file)
     end
   end
 
-  def launch!(csv_filename=nil)
+  def launch_app!(csv_filename=nil)
     @csv_filename = csv_filename
     normalize_csv_file(csv_filename)
     @catalog = create_catalog(CsvModifier::NORMALIZED_CSV_FILENAME)
@@ -42,7 +42,21 @@ class App
     @catalog = Catalog.new(filepath)
   end
 
-  def filter_results(catalog, filters)
+  def perform_search(input)
+    exit! if EXIT_TERMS.include? input
+    search_terms = get_user_search_terms(input)
+    search_dinosaurs(search_terms)
+  end
+
+  def search_dinosaurs(terms)
+    @filtered_dinosaurs = nil
+    @filtered_dinosaurs = filter_dinosaur_results(@catalog, terms)
+    puts "\nYour search resulted in #{@filtered_dinosaurs.size} dinosaurs:"
+    print_search_summary(@filtered_dinosaurs)
+    user_processing
+  end
+
+  def filter_dinosaur_results(catalog, filters)
     filtered_dinosaur_listings = catalog.dinosaurs
     filters.each do |search_type, criteria|
       filter_function = "filter_#{search_type}".to_sym

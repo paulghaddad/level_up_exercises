@@ -16,26 +16,12 @@ module UserProcessing
     perform_search(user_input)
   end
 
-  def perform_search(input)
-    exit! if EXIT_TERMS.include? input
-    search_terms = get_user_search_terms(input)
-    filter_dinosaurs(search_terms)
-  end
-
   def get_user_search_terms(phrase)
     search_terms = {}
     SEARCH_REGEX.each do |term, regex|
       search_terms[term] = phrase.scan(regex) unless phrase.scan(regex).empty? #  use inject?
     end
     search_terms
-  end
-
-  def filter_dinosaurs(terms)
-    @filtered_dinosaurs = nil
-    @filtered_dinosaurs = filter_results(@catalog, terms)
-    puts "\nYour search resulted in #{@filtered_dinosaurs.size} dinosaurs:"
-    print_search_summary(@filtered_dinosaurs)
-    user_processing
   end
 
   def user_processing
@@ -59,7 +45,7 @@ module UserProcessing
   end
 
   def new_search
-    launch!(@csv_filename)
+    launch_app!(@csv_filename)
   end
 
   def json

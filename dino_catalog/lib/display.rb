@@ -4,7 +4,7 @@ module Display
   HEADER_NAMES = ["Name", "Period", "Continent", "Diet", "Weight (lbs)", "Walking", "Description"]
 
   def print_dinosaur_set(set)
-    print_header
+    print_summary_header
     set.each do |entry|
       print_attribute(entry.name, PADDING)
       print_attribute(entry.period, PADDING)
@@ -50,7 +50,7 @@ module Display
     end
   end
 
-  def print_header
+  def print_summary_header
     puts "\n\n"
     HEADER_NAMES.each { |header| print header.center(PADDING) }
     puts ''
