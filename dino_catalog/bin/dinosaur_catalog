@@ -1,0 +1,18 @@
+#!/usr/bin/env ruby
+
+require_relative '../lib/dinosaur_catalog/catalog'
+require_relative '../lib/dinosaur_catalog/app'
+
+app = DinosaurCatalog::App.new("dinosaur_catalog")
+
+USER_FILE_IMPORT = %Q%\nPlease enter the filename of the CSV to import\n\n\
+Enter 'quit' or 'exit' to leave the program.\n\n>> %
+
+if ARGV.size == 1
+  csv_file = ARGV.shift
+  app.launch_app!(File.join(File.dirname(__FILE__), csv_file))
+else
+  print USER_FILE_IMPORT
+  user_file = gets.chomp
+  app.create_app(File.join(File.dirname(__FILE__), user_file))
+end
