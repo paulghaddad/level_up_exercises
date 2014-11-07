@@ -9,17 +9,17 @@ module UserProcessing
   EXIT_TERMS = ['quit', 'exit']
 
   def obtain_user_filters
-    @filtered_dinosaurs = nil
     print UserPrompts::USER_SEARCH_PROMPT
     print '> '
     user_input = gets.chomp.downcase
     puts
-    exit! if EXIT_TERMS.include? user_input
-    search_terms = get_user_search_terms(user_input)
-    @filtered_dinosaurs = filter_results(@catalog, search_terms)
-    puts "\nYour search resulted in #{@filtered_dinosaurs.size} dinosaurs:"
-    print_search_summary(@filtered_dinosaurs)
-    user_processing
+    perform_search(user_input)
+  end
+
+  def perform_search(input)
+    exit! if EXIT_TERMS.include? input
+    search_terms = get_user_search_terms(input)
+    filter_dinosaurs(search_terms)
   end
 
   def get_user_search_terms(phrase)
@@ -30,28 +30,46 @@ module UserProcessing
     search_terms
   end
 
+  def filter_dinosaurs(terms)
+    @filtered_dinosaurs = nil
+    @filtered_dinosaurs = filter_results(@catalog, terms)
+    puts "\nYour search resulted in #{@filtered_dinosaurs.size} dinosaurs:"
+    print_search_summary(@filtered_dinosaurs)
+    user_processing
+  end
+
   def user_processing
     print UserPrompts::USER_PROCESSING_PROMPT
     print '> '
     user_input = gets.chomp.downcase
-    exit! if EXIT_TERMS.include? user_input
     user_actions(user_input)
   end
 
-  def user_actions(input)
-    exit! EXIT_TERMS.include? user_input
-    if input == 'print'
-      print_dinosaur_set(@filtered_dinosaurs)
-      user_processing(@filtered_dinosaurs)
-    elsif input == 'search'
-      launch!(@csv_filename)
-    elsif input == 'json'
-      convert_to_json(@filtered_dinosaurs)
-      puts "\nYour JSON file has been saved as json_export.json in the main directory."
-      user_processing(@filtered_dinosaurs)
-    else
-      print_dinosaur_instance(@filtered_dinosaurs, input)
-      user_processing(@filtered_dinosaurs)
-    end
+  def user_actions(user_input)
+    exit! if EXIT_TERMS.include? user_input
+    return print_results if user_input == 'print'
+    return new_search if user_input == 'search'
+    return json if user_input == 'json'
+    return search_dinosaur(user_input)
+  end
+
+  def print_results
+    print_dinosaur_set(@filtered_dinosaurs)
+    user_processing
+  end
+
+  def new_search
+    launch!(@csv_filename)
+  end
+
+  def json
+    convert_to_json(@filtered_dinosaurs)
+    puts "\nYour JSON file has been saved as json_export.json in the main directory."
+    user_processing
+  end
+
+  def search_dinosaur(input)
+    print_dinosaur_instance(@filtered_dinosaurs, input)
+    user_processing
   end
 end

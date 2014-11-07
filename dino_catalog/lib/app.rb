@@ -15,8 +15,20 @@ class App
   include JsonExport
   include UserProcessing
 
+  EXIT_TERMS = ['quit', 'exit']
+
   def initialize(name)
     @app_name = name
+  end
+
+  def create_app(file)
+    if EXIT_TERMS.include?(file)
+      puts "\n\nExiting.\n\n"
+      exit!
+    else
+      puts "\nFile Found!\n"
+      launch!(file)
+    end
   end
 
   def launch!(csv_filename=nil)

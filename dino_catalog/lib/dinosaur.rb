@@ -27,8 +27,8 @@ class Dinosaur
   end
 
   def to_hash
-    instance_variables.inject({}) do |variable|
-      hash[variable.to_s.delete("@")] = instance_variable_get(variable)
-    end
+    hash = {}
+    instance_variables.each {|var| hash[var.to_s.delete("@")] = instance_variable_get(var) }
+    hash
   end
 end
