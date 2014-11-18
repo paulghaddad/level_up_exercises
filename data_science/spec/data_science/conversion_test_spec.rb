@@ -5,10 +5,11 @@ require 'data_science/view_helpers'
 module DataScience
   describe ConversionTest do
     let(:conversion_test) { ConversionTest.new }
-    let(:parsed_json_data) do [
-        { "date" => "2014-03-20", "cohort" => "A", "result" => 1 },
-        { "date" => "2014-03-20", "cohort" => "B", "result" => 1 }
-      ]
+    let(:parsed_json_data) do
+    [
+      { "date" => "2014-03-20", "cohort" => "A", "result" => 1 },
+      { "date" => "2014-03-20", "cohort" => "B", "result" => 1 }
+    ]
     end
 
     context 'when importing data' do

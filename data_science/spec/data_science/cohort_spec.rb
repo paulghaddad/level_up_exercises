@@ -1,4 +1,4 @@
- require 'data_science/cohort'
+require 'data_science/cohort'
 require 'data_science/view_helpers'
 
 module DataScience
