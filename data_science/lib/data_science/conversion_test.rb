@@ -23,6 +23,7 @@ module DataScience
     end
 
     def import_data(data)
+      raise ArgumentError, "The JSON file does not contain data points" if data.size < 1
       test_data, control_data = partition_data(data)
       control_group << control_data
       test_group << test_data

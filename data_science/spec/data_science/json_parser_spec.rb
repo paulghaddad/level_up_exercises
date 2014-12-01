@@ -5,7 +5,7 @@ module DataScience
     describe '.parse_file' do
       let(:sample_file) { File.join(File.dirname(__FILE__), 'source_data_test.json') }
 
-      it "parses a JSON file" do
+      it "parses a JSON file" do # Happy Path
         expect(JsonParser.parse_file(sample_file)).to have(4).items
       end
     end
