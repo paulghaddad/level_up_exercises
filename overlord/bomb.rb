@@ -1,7 +1,6 @@
 class Bomb
-  attr_accessor :status
   attr_reader :activation_code, :deactivation_code,
-              :incorrect_deactivation_attempts
+              :incorrect_deactivation_attempts, :status
 
   DEFAULT_CODES = {
     activation:   "1234",
@@ -10,8 +9,7 @@ class Bomb
 
   MAX_INCORRECT_ATTEMPTS = 3
 
-  def initialize(activation_code: DEFAULT_CODES[:activation],
-                 deactivation_code: DEFAULT_CODES[:deactivation])
+  def initialize(activation_code: "", deactivation_code: "")
     @activation_code = valid_code(activation_code) || DEFAULT_CODES[:activation]
     @deactivation_code = valid_code(deactivation_code) || DEFAULT_CODES[:deactivation]
     @status = :deactivated
@@ -30,6 +28,15 @@ class Bomb
     @status == :exploded
   end
 
+  def deactivate
+    @status = :deactivated unless @status == :exploded
+    @incorrect_deactivation_attempts = 0
+  end
+
+  def activate
+    @status = :active unless @status == :exploded
+  end
+
   private
 
   def valid_code(code)
@@ -43,14 +50,5 @@ class Bomb
   def incorrect_attempt
     @incorrect_deactivation_attempts += 1
     explode! if @incorrect_deactivation_attempts == MAX_INCORRECT_ATTEMPTS
-  end
-
-  def activate
-    @status = :active unless @status == :exploded
-  end
-
-  def deactivate
-    @status = :deactivated unless @status == :exploded
-    @incorrect_deactivation_attempts = 0
   end
 end

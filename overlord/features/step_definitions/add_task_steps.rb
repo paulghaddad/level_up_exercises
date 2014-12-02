@@ -1,3 +1,8 @@
+def try_code(code, on: "Enter Code")
+  fill_in(on, with: code)
+  click_button("Enter Code")
+end
+
 Given(/^I have entered the activation and deactivation codes$/) do
   visit '/'
   fill_in('Set Activation Code', with: 4444)
@@ -17,19 +22,14 @@ Given(/^the bomb is active$/) do
 end
 
 Given(/^I have a bomb with two incorrect attempts$/) do
-  fill_in('Enter Code', with: 6987)
-  click_button("Enter Code")
-  fill_in('Enter Code', with: 6987)
-  click_button("Enter Code")
+  try_code(6987)
+  try_code(6987)
 end
 
 Given(/^the bomb has exploded$/) do
-  fill_in('Enter Code', with: 6987)
-  click_button("Enter Code")
-  fill_in('Enter Code', with: 6987)
-  click_button("Enter Code")
-  fill_in('Enter Code', with: 6987)
-  click_button("Enter Code")
+  try_code(6987)
+  try_code(6987)
+  try_code(6987)
 end
 
 When(/^I set the activation and deactivation codes$/) do
@@ -39,30 +39,24 @@ When(/^I set the activation and deactivation codes$/) do
 end
 
 When(/^I enter the default activation code$/) do
-  fill_in('Enter Code', with: 4444)
-  click_button("Enter Code")
+  try_code(4444)
 end
 
 When(/^I enter the incorrect deactivation code$/) do
-  fill_in('Enter Code', with: 6987)
-  click_button("Enter Code")
+  try_code(6987)
 end
 
 When(/^I enter my correct activation code$/) do
-  fill_in('Enter Code', with: 1234)
-  click_button("Enter Code")
+  try_code(1234)
 end
 
 When(/^I enter my correct deactivation code$/) do
-  fill_in('Enter Code', with: 8888)
-  click_button("Enter Code")
+  try_code(8888)
 end
 
 When(/^I enter the correct activation code twice$/) do
-  fill_in('Enter Code', with: 4444)
-  click_button("Enter Code")
-  fill_in('Enter Code', with: 4444)
-  click_button("Enter Code")
+  try_code(4444)
+  try_code(4444)
 end
 
 When(/^I set the activation code to (\d+)$/) do |code|
@@ -74,7 +68,7 @@ When(/^I set the deactivation code to (\d+)$/) do |code|
 end
 
 When(/^I click the (.+) button$/) do |button|
-  click_button("#{button}")
+  click_button(button)
 end
 
 When(/^I enter (\d+) in the enter code box$/) do |code|
@@ -125,5 +119,3 @@ end
 Then(/^the Enter Code button should not work$/) do
   expect(current_path).to eq('/exploded')
 end
-
-

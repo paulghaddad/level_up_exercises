@@ -42,19 +42,19 @@ describe Bomb do
 
     describe '#analyze_user_code' do
       it 'will activate bomb if user code matches activation code' do
-        bomb.status = :deactivated
+        bomb.deactivate
         bomb.analyze_user_code("8888")
         expect(bomb.status).to eq(:active)
       end
 
       it 'will deactivate bomb if the user code matches deactivation code' do
-        bomb.status = :active
+        bomb.activate
         bomb.analyze_user_code("2222")
         expect(bomb.status).to eq(:deactivated)
       end
 
       it 'will increase incorrect_deactivation_attempt if user code is wrong' do
-        bomb.status = :active
+        bomb.activate
         bomb.analyze_user_code("12")
         expect(bomb.incorrect_deactivation_attempts).to eq(1)
       end
@@ -65,7 +65,7 @@ describe Bomb do
     let(:bomb) { Bomb.new }
 
     it 'will give its state as exploded' do
-      bomb.status = :active
+      bomb.activate
       bomb.analyze_user_code("1")
       bomb.analyze_user_code("1")
       bomb.analyze_user_code("1")
