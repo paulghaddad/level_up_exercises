@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-
+ruby '2.1.3'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.0.beta2'
@@ -57,11 +57,18 @@ group :development, :test do
   # Cucumber
   gem 'cucumber-rails', require: false
   gem 'database_cleaner'
+
+  # SQLite3 not for use on Heroku
+  gem 'sqlite3'
 end
 
 group :test do
   gem 'capybara'
   gem "launchy"
   gem "factory_girl_rails", "~> 4.0"
+end
+
+group :production do
+  gem 'pg'
 end
 
