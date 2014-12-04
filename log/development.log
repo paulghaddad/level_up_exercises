@@ -1,0 +1,555 @@
+  [1m[36m (1.1ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (1.1ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to CreateShows (20141202210022)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  CREATE TABLE "shows" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.3ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateShows (20141202210022)
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mCREATE TABLE "shows" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (1.2ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateShows (20141202210022)
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mCREATE TABLE "shows" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.8ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateShows (20141202210022)
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.5ms)[0m  [1mCREATE TABLE "shows" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (1.0ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateShows (20141202210022)
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mCREATE TABLE "shows" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (1.0ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateShows (20141202210022)
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mCREATE TABLE "shows" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (1.0ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateShows (20141202210022)
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mCREATE TABLE "shows" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20141202210022"]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+
+Started GET "/" for ::1 at 2014-12-02 15:13:58 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /Users/phaddad/.gem/ruby/2.1.3/gems/railties-4.2.0.beta2/lib/rails/templates/rails/welcome/index.html.erb (1.8ms)
+Completed 200 OK in 16ms (Views: 9.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/shows" for ::1 at 2014-12-02 15:20:09 -0600
+
+ActionController::RoutingError (uninitialized constant ShowsController):
+  activesupport (4.2.0.beta2) lib/active_support/inflector/methods.rb:261:in `const_get'
+  activesupport (4.2.0.beta2) lib/active_support/inflector/methods.rb:261:in `block in constantize'
+  activesupport (4.2.0.beta2) lib/active_support/inflector/methods.rb:259:in `each'
+  activesupport (4.2.0.beta2) lib/active_support/inflector/methods.rb:259:in `inject'
+  activesupport (4.2.0.beta2) lib/active_support/inflector/methods.rb:259:in `constantize'
+  actionpack (4.2.0.beta2) lib/action_dispatch/routing/route_set.rb:68:in `controller_reference'
+  actionpack (4.2.0.beta2) lib/action_dispatch/routing/route_set.rb:58:in `controller'
+  actionpack (4.2.0.beta2) lib/action_dispatch/routing/route_set.rb:37:in `serve'
+  actionpack (4.2.0.beta2) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.0.beta2) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.0.beta2) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.0.beta2) lib/action_dispatch/routing/route_set.rb:750:in `call'
+  rack (1.6.0.beta2) lib/rack/etag.rb:24:in `call'
+  rack (1.6.0.beta2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.0.beta2) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.0.beta2) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.0.beta2) lib/action_dispatch/middleware/flash.rb:257:in `call'
+  rack (1.6.0.beta2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.0.beta2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.0.beta2) lib/action_dispatch/middleware/cookies.rb:558:in `call'
+  activerecord (4.2.0.beta2) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.0.beta2) lib/active_record/connection_adapters/abstract/connection_pool.rb:645:in `call'
+  activerecord (4.2.0.beta2) lib/active_record/migration.rb:378:in `call'
+  actionpack (4.2.0.beta2) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.0.beta2) lib/active_support/callbacks.rb:83:in `run_callbacks'
+  actionpack (4.2.0.beta2) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.0.beta2) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.0.beta2) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  web-console (2.0.0) lib/action_dispatch/debug_exceptions.rb:18:in `middleware_call'
+  web-console (2.0.0) lib/action_dispatch/debug_exceptions.rb:13:in `call'
+  actionpack (4.2.0.beta2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0.beta2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0.beta2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.0.beta2) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.0.beta2) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.0.beta2) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.0.beta2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.0.beta2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.0.beta2) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.0.beta2) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.0.beta2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.0.beta2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.0.beta2) lib/action_dispatch/middleware/static.rb:103:in `call'
+  rack (1.6.0.beta2) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.0.beta2) lib/rails/engine.rb:514:in `call'
+  railties (4.2.0.beta2) lib/rails/application.rb:161:in `call'
+  rack (1.6.0.beta2) lib/rack/lock.rb:17:in `call'
+  rack (1.6.0.beta2) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.0.beta2) lib/rack/handler/webrick.rb:89:in `service'
+  /Users/phaddad/.rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/phaddad/.rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/phaddad/.rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/phaddad/.gem/ruby/2.1.3/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /Users/phaddad/.gem/ruby/2.1.3/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_route.html.erb (0.6ms)
+  Rendered /Users/phaddad/.gem/ruby/2.1.3/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_table.html.erb (6.5ms)
+  Rendered /Users/phaddad/.gem/ruby/2.1.3/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/phaddad/.gem/ruby/2.1.3/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (0.8ms)
+  Rendered /Users/phaddad/.gem/ruby/2.1.3/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/routing_error.html.erb within rescues/layout (38.6ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/" for ::1 at 2014-12-04 14:20:47 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /Users/phaddad/.gem/ruby/2.1.3/gems/railties-4.2.0.beta2/lib/rails/templates/rails/welcome/index.html.erb (2.3ms)
+Completed 200 OK in 14ms (Views: 7.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2014-12-04 14:23:26 -0600
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (0.3ms)
+Warning. Error encountered while saving cache 660b7c5f231d7a0a0581136d6a48352c37a33106/shows.css.scssc: can't dump anonymous class #<Class:0x007f9b98f45390>
+
+Warning. Error encountered while saving cache 660b7c5f231d7a0a0581136d6a48352c37a33106/static_pages.css.scssc: can't dump anonymous class #<Class:0x007f9b98f45390>
+
+Completed 200 OK in 656ms (Views: 655.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/shows-c15e1c77cb5b3534b610348cb9f3c56d.css?body=1" for ::1 at 2014-12-04 14:23:27 -0600
+
+
+Started GET "/assets/shows-5cf9e471f6dbffd4600ae141132a5888.js?body=1" for ::1 at 2014-12-04 14:23:27 -0600
+
+
+Started GET "/assets/jquery_ujs-d68671a1cc3ff7bd3f96ef9686111a5d.js?body=1" for ::1 at 2014-12-04 14:23:27 -0600
+
+
+Started GET "/assets/static_pages-c15e1c77cb5b3534b610348cb9f3c56d.css?body=1" for ::1 at 2014-12-04 14:23:27 -0600
+
+
+Started GET "/assets/application-810549ca197dca4835ff8cc625d9115f.js?body=1" for ::1 at 2014-12-04 14:23:27 -0600
+
+
+Started GET "/assets/turbolinks-60c7d150bd7b7a75d67e6d1f0d4129a6.js?body=1" for ::1 at 2014-12-04 14:23:27 -0600
+
+
+Started GET "/assets/application-6104dfe918f9daf733a0654c847046eb.css?body=1" for ::1 at 2014-12-04 14:23:27 -0600
+
+
+Started GET "/assets/jquery-dfb1e594c3e61a04cc388702c3feec1f.js?body=1" for ::1 at 2014-12-04 14:23:27 -0600
+
+
+Started GET "/assets/static_pages-5cf9e471f6dbffd4600ae141132a5888.js?body=1" for ::1 at 2014-12-04 14:23:27 -0600
+
+
+Started GET "/" for ::1 at 2014-12-04 14:40:34 -0600
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 35ms (Views: 34.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/shows-c15e1c77cb5b3534b610348cb9f3c56d.css?body=1" for ::1 at 2014-12-04 14:40:34 -0600
+
+
+Started GET "/assets/static_pages-c15e1c77cb5b3534b610348cb9f3c56d.css?body=1" for ::1 at 2014-12-04 14:40:34 -0600
+
+
+Started GET "/assets/jquery_ujs-d68671a1cc3ff7bd3f96ef9686111a5d.js?body=1" for ::1 at 2014-12-04 14:40:34 -0600
+
+
+Started GET "/assets/jquery-dfb1e594c3e61a04cc388702c3feec1f.js?body=1" for ::1 at 2014-12-04 14:40:34 -0600
+
+
+Started GET "/assets/application-6104dfe918f9daf733a0654c847046eb.css?body=1" for ::1 at 2014-12-04 14:40:34 -0600
+
+
+Started GET "/assets/turbolinks-60c7d150bd7b7a75d67e6d1f0d4129a6.js?body=1" for ::1 at 2014-12-04 14:40:34 -0600
+
+
+Started GET "/assets/shows-5cf9e471f6dbffd4600ae141132a5888.js?body=1" for ::1 at 2014-12-04 14:40:34 -0600
+
+
+Started GET "/assets/static_pages-5cf9e471f6dbffd4600ae141132a5888.js?body=1" for ::1 at 2014-12-04 14:40:34 -0600
+
+
+Started GET "/assets/application-810549ca197dca4835ff8cc625d9115f.js?body=1" for ::1 at 2014-12-04 14:40:34 -0600
+
+
+Started GET "/" for ::1 at 2014-12-04 14:40:48 -0600
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 39ms (Views: 38.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/shows-c15e1c77cb5b3534b610348cb9f3c56d.css?body=1" for ::1 at 2014-12-04 14:40:48 -0600
+
+
+Started GET "/assets/jquery-dfb1e594c3e61a04cc388702c3feec1f.js?body=1" for ::1 at 2014-12-04 14:40:48 -0600
+
+
+Started GET "/assets/turbolinks-60c7d150bd7b7a75d67e6d1f0d4129a6.js?body=1" for ::1 at 2014-12-04 14:40:48 -0600
+
+
+Started GET "/assets/application-6104dfe918f9daf733a0654c847046eb.css?body=1" for ::1 at 2014-12-04 14:40:48 -0600
+
+
+Started GET "/assets/jquery_ujs-d68671a1cc3ff7bd3f96ef9686111a5d.js?body=1" for ::1 at 2014-12-04 14:40:48 -0600
+
+
+Started GET "/assets/static_pages-c15e1c77cb5b3534b610348cb9f3c56d.css?body=1" for ::1 at 2014-12-04 14:40:48 -0600
+
+
+Started GET "/assets/shows-5cf9e471f6dbffd4600ae141132a5888.js?body=1" for ::1 at 2014-12-04 14:40:48 -0600
+
+
+Started GET "/assets/static_pages-5cf9e471f6dbffd4600ae141132a5888.js?body=1" for ::1 at 2014-12-04 14:40:48 -0600
+
+
+Started GET "/assets/application-810549ca197dca4835ff8cc625d9115f.js?body=1" for ::1 at 2014-12-04 14:40:48 -0600
+
+
+Started GET "/" for ::1 at 2014-12-04 14:46:08 -0600
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 80ms (Views: 79.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/static_pages-c15e1c77cb5b3534b610348cb9f3c56d.css?body=1" for ::1 at 2014-12-04 14:46:08 -0600
+
+
+Started GET "/assets/shows-c15e1c77cb5b3534b610348cb9f3c56d.css?body=1" for ::1 at 2014-12-04 14:46:08 -0600
+
+
+Started GET "/assets/application-6104dfe918f9daf733a0654c847046eb.css?body=1" for ::1 at 2014-12-04 14:46:08 -0600
+
+
+Started GET "/assets/turbolinks-60c7d150bd7b7a75d67e6d1f0d4129a6.js?body=1" for ::1 at 2014-12-04 14:46:08 -0600
+
+
+Started GET "/assets/jquery-dfb1e594c3e61a04cc388702c3feec1f.js?body=1" for ::1 at 2014-12-04 14:46:08 -0600
+
+
+Started GET "/assets/jquery_ujs-d68671a1cc3ff7bd3f96ef9686111a5d.js?body=1" for ::1 at 2014-12-04 14:46:08 -0600
+
+
+Started GET "/assets/shows-5cf9e471f6dbffd4600ae141132a5888.js?body=1" for ::1 at 2014-12-04 14:46:08 -0600
+
+
+Started GET "/assets/static_pages-5cf9e471f6dbffd4600ae141132a5888.js?body=1" for ::1 at 2014-12-04 14:46:08 -0600
+
+
+Started GET "/assets/application-810549ca197dca4835ff8cc625d9115f.js?body=1" for ::1 at 2014-12-04 14:46:08 -0600
+
+
+Started GET "/" for ::1 at 2014-12-04 14:46:11 -0600
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 43ms (Views: 42.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/shows-c15e1c77cb5b3534b610348cb9f3c56d.css?body=1" for ::1 at 2014-12-04 14:46:11 -0600
+
+
+Started GET "/assets/static_pages-c15e1c77cb5b3534b610348cb9f3c56d.css?body=1" for ::1 at 2014-12-04 14:46:11 -0600
+
+
+Started GET "/assets/application-6104dfe918f9daf733a0654c847046eb.css?body=1" for ::1 at 2014-12-04 14:46:11 -0600
+
+
+Started GET "/assets/jquery-dfb1e594c3e61a04cc388702c3feec1f.js?body=1" for ::1 at 2014-12-04 14:46:11 -0600
+
+
+Started GET "/assets/jquery_ujs-d68671a1cc3ff7bd3f96ef9686111a5d.js?body=1" for ::1 at 2014-12-04 14:46:11 -0600
+
+
+Started GET "/assets/turbolinks-60c7d150bd7b7a75d67e6d1f0d4129a6.js?body=1" for ::1 at 2014-12-04 14:46:11 -0600
+
+
+Started GET "/assets/shows-5cf9e471f6dbffd4600ae141132a5888.js?body=1" for ::1 at 2014-12-04 14:46:11 -0600
+
+
+Started GET "/assets/static_pages-5cf9e471f6dbffd4600ae141132a5888.js?body=1" for ::1 at 2014-12-04 14:46:11 -0600
+
+
+Started GET "/assets/application-810549ca197dca4835ff8cc625d9115f.js?body=1" for ::1 at 2014-12-04 14:46:11 -0600
+
+
+Started GET "/artists" for ::1 at 2014-12-04 14:46:13 -0600
+Processing by StaticPagesController#artists as HTML
+  Rendered static_pages/artists.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 47ms (Views: 46.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2014-12-04 15:33:08 -0600
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 36ms (Views: 35.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/shows-c15e1c77cb5b3534b610348cb9f3c56d.css?body=1" for ::1 at 2014-12-04 15:33:08 -0600
+
+
+Started GET "/assets/static_pages-c15e1c77cb5b3534b610348cb9f3c56d.css?body=1" for ::1 at 2014-12-04 15:33:08 -0600
+
+
+Started GET "/assets/shows-5cf9e471f6dbffd4600ae141132a5888.js?body=1" for ::1 at 2014-12-04 15:33:08 -0600
+
+
+Started GET "/assets/jquery_ujs-d68671a1cc3ff7bd3f96ef9686111a5d.js?body=1" for ::1 at 2014-12-04 15:33:08 -0600
+
+
+Started GET "/assets/jquery-dfb1e594c3e61a04cc388702c3feec1f.js?body=1" for ::1 at 2014-12-04 15:33:08 -0600
+
+
+Started GET "/assets/static_pages-5cf9e471f6dbffd4600ae141132a5888.js?body=1" for ::1 at 2014-12-04 15:33:08 -0600
+
+
+Started GET "/assets/application-6104dfe918f9daf733a0654c847046eb.css?body=1" for ::1 at 2014-12-04 15:33:08 -0600
+
+
+Started GET "/assets/turbolinks-60c7d150bd7b7a75d67e6d1f0d4129a6.js?body=1" for ::1 at 2014-12-04 15:33:08 -0600
+
+
+Started GET "/assets/application-810549ca197dca4835ff8cc625d9115f.js?body=1" for ::1 at 2014-12-04 15:33:08 -0600
+
+
+Started GET "/" for ::1 at 2014-12-04 15:33:20 -0600
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 49ms (Views: 48.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/shows-c15e1c77cb5b3534b610348cb9f3c56d.css?body=1" for ::1 at 2014-12-04 15:33:20 -0600
+
+
+Started GET "/assets/static_pages-c15e1c77cb5b3534b610348cb9f3c56d.css?body=1" for ::1 at 2014-12-04 15:33:20 -0600
+
+
+Started GET "/assets/jquery-dfb1e594c3e61a04cc388702c3feec1f.js?body=1" for ::1 at 2014-12-04 15:33:20 -0600
+
+
+Started GET "/assets/application-6104dfe918f9daf733a0654c847046eb.css?body=1" for ::1 at 2014-12-04 15:33:20 -0600
+
+
+Started GET "/assets/jquery_ujs-d68671a1cc3ff7bd3f96ef9686111a5d.js?body=1" for ::1 at 2014-12-04 15:33:20 -0600
+
+
+Started GET "/assets/turbolinks-60c7d150bd7b7a75d67e6d1f0d4129a6.js?body=1" for ::1 at 2014-12-04 15:33:20 -0600
+
+
+Started GET "/assets/shows-5cf9e471f6dbffd4600ae141132a5888.js?body=1" for ::1 at 2014-12-04 15:33:20 -0600
+
+
+Started GET "/assets/application-810549ca197dca4835ff8cc625d9115f.js?body=1" for ::1 at 2014-12-04 15:33:20 -0600
+
+
+Started GET "/assets/static_pages-5cf9e471f6dbffd4600ae141132a5888.js?body=1" for ::1 at 2014-12-04 15:33:20 -0600
+
+
+Started GET "/" for ::1 at 2014-12-04 15:33:42 -0600
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 47ms (Views: 46.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/shows-c15e1c77cb5b3534b610348cb9f3c56d.css?body=1" for ::1 at 2014-12-04 15:33:42 -0600
+
+
+Started GET "/assets/application-6104dfe918f9daf733a0654c847046eb.css?body=1" for ::1 at 2014-12-04 15:33:42 -0600
+
+
+Started GET "/assets/static_pages-c15e1c77cb5b3534b610348cb9f3c56d.css?body=1" for ::1 at 2014-12-04 15:33:42 -0600
+
+
+Started GET "/assets/jquery-dfb1e594c3e61a04cc388702c3feec1f.js?body=1" for ::1 at 2014-12-04 15:33:42 -0600
+
+
+Started GET "/assets/turbolinks-60c7d150bd7b7a75d67e6d1f0d4129a6.js?body=1" for ::1 at 2014-12-04 15:33:42 -0600
+
+
+Started GET "/assets/jquery_ujs-d68671a1cc3ff7bd3f96ef9686111a5d.js?body=1" for ::1 at 2014-12-04 15:33:42 -0600
+
+
+Started GET "/assets/shows-5cf9e471f6dbffd4600ae141132a5888.js?body=1" for ::1 at 2014-12-04 15:33:42 -0600
+
+
+Started GET "/assets/static_pages-5cf9e471f6dbffd4600ae141132a5888.js?body=1" for ::1 at 2014-12-04 15:33:42 -0600
+
+
+Started GET "/assets/application-810549ca197dca4835ff8cc625d9115f.js?body=1" for ::1 at 2014-12-04 15:33:42 -0600
+
+
+Started GET "/" for ::1 at 2014-12-04 15:33:47 -0600
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 40ms (Views: 39.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/shows-c15e1c77cb5b3534b610348cb9f3c56d.css?body=1" for ::1 at 2014-12-04 15:33:47 -0600
+
+
+Started GET "/assets/static_pages-c15e1c77cb5b3534b610348cb9f3c56d.css?body=1" for ::1 at 2014-12-04 15:33:47 -0600
+
+
+Started GET "/assets/application-6104dfe918f9daf733a0654c847046eb.css?body=1" for ::1 at 2014-12-04 15:33:47 -0600
+
+
+Started GET "/assets/jquery_ujs-d68671a1cc3ff7bd3f96ef9686111a5d.js?body=1" for ::1 at 2014-12-04 15:33:47 -0600
+
+
+Started GET "/assets/jquery-dfb1e594c3e61a04cc388702c3feec1f.js?body=1" for ::1 at 2014-12-04 15:33:47 -0600
+
+
+Started GET "/assets/shows-5cf9e471f6dbffd4600ae141132a5888.js?body=1" for ::1 at 2014-12-04 15:33:47 -0600
+
+
+Started GET "/assets/turbolinks-60c7d150bd7b7a75d67e6d1f0d4129a6.js?body=1" for ::1 at 2014-12-04 15:33:47 -0600
+
+
+Started GET "/assets/static_pages-5cf9e471f6dbffd4600ae141132a5888.js?body=1" for ::1 at 2014-12-04 15:33:47 -0600
+
+
+Started GET "/assets/application-810549ca197dca4835ff8cc625d9115f.js?body=1" for ::1 at 2014-12-04 15:33:47 -0600
+
+
+Started GET "/" for ::1 at 2014-12-04 15:34:40 -0600
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 55ms (Views: 54.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/shows-c15e1c77cb5b3534b610348cb9f3c56d.css?body=1" for ::1 at 2014-12-04 15:34:40 -0600
+
+
+Started GET "/assets/turbolinks-60c7d150bd7b7a75d67e6d1f0d4129a6.js?body=1" for ::1 at 2014-12-04 15:34:40 -0600
+
+
+Started GET "/assets/jquery_ujs-d68671a1cc3ff7bd3f96ef9686111a5d.js?body=1" for ::1 at 2014-12-04 15:34:40 -0600
+
+
+Started GET "/assets/static_pages-c15e1c77cb5b3534b610348cb9f3c56d.css?body=1" for ::1 at 2014-12-04 15:34:40 -0600
+
+
+Started GET "/assets/application-6104dfe918f9daf733a0654c847046eb.css?body=1" for ::1 at 2014-12-04 15:34:40 -0600
+
+
+Started GET "/assets/shows-5cf9e471f6dbffd4600ae141132a5888.js?body=1" for ::1 at 2014-12-04 15:34:40 -0600
+
+
+Started GET "/assets/jquery-dfb1e594c3e61a04cc388702c3feec1f.js?body=1" for ::1 at 2014-12-04 15:34:40 -0600
+
+
+Started GET "/assets/application-810549ca197dca4835ff8cc625d9115f.js?body=1" for ::1 at 2014-12-04 15:34:40 -0600
+
+
+Started GET "/assets/static_pages-5cf9e471f6dbffd4600ae141132a5888.js?body=1" for ::1 at 2014-12-04 15:34:40 -0600
+
+
+Started GET "/" for ::1 at 2014-12-04 16:13:24 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 103ms (Views: 96.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application-6104dfe918f9daf733a0654c847046eb.css?body=1" for ::1 at 2014-12-04 16:13:24 -0600
+
+
+Started GET "/assets/shows-c15e1c77cb5b3534b610348cb9f3c56d.css?body=1" for ::1 at 2014-12-04 16:13:24 -0600
+
+
+Started GET "/assets/jquery_ujs-d68671a1cc3ff7bd3f96ef9686111a5d.js?body=1" for ::1 at 2014-12-04 16:13:24 -0600
+
+
+Started GET "/assets/static_pages-c15e1c77cb5b3534b610348cb9f3c56d.css?body=1" for ::1 at 2014-12-04 16:13:24 -0600
+
+
+Started GET "/assets/jquery-dfb1e594c3e61a04cc388702c3feec1f.js?body=1" for ::1 at 2014-12-04 16:13:24 -0600
+
+
+Started GET "/assets/turbolinks-60c7d150bd7b7a75d67e6d1f0d4129a6.js?body=1" for ::1 at 2014-12-04 16:13:24 -0600
+
+
+Started GET "/assets/static_pages-5cf9e471f6dbffd4600ae141132a5888.js?body=1" for ::1 at 2014-12-04 16:13:24 -0600
+
+
+Started GET "/assets/shows-5cf9e471f6dbffd4600ae141132a5888.js?body=1" for ::1 at 2014-12-04 16:13:24 -0600
+
+
+Started GET "/assets/application-810549ca197dca4835ff8cc625d9115f.js?body=1" for ::1 at 2014-12-04 16:13:24 -0600
+
+
+Started GET "/" for ::1 at 2014-12-04 16:38:04 -0600
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 42ms (Views: 41.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/shows-c15e1c77cb5b3534b610348cb9f3c56d.css?body=1" for ::1 at 2014-12-04 16:38:04 -0600
+
+
+Started GET "/assets/turbolinks-60c7d150bd7b7a75d67e6d1f0d4129a6.js?body=1" for ::1 at 2014-12-04 16:38:04 -0600
+
+
+Started GET "/assets/jquery-dfb1e594c3e61a04cc388702c3feec1f.js?body=1" for ::1 at 2014-12-04 16:38:04 -0600
+
+
+Started GET "/assets/static_pages-c15e1c77cb5b3534b610348cb9f3c56d.css?body=1" for ::1 at 2014-12-04 16:38:04 -0600
+
+
+Started GET "/assets/jquery_ujs-d68671a1cc3ff7bd3f96ef9686111a5d.js?body=1" for ::1 at 2014-12-04 16:38:04 -0600
+
+
+Started GET "/assets/application-6104dfe918f9daf733a0654c847046eb.css?body=1" for ::1 at 2014-12-04 16:38:04 -0600
+
+
+Started GET "/assets/shows-5cf9e471f6dbffd4600ae141132a5888.js?body=1" for ::1 at 2014-12-04 16:38:04 -0600
+
+
+Started GET "/assets/static_pages-5cf9e471f6dbffd4600ae141132a5888.js?body=1" for ::1 at 2014-12-04 16:38:04 -0600
+
+
+Started GET "/assets/application-810549ca197dca4835ff8cc625d9115f.js?body=1" for ::1 at 2014-12-04 16:38:04 -0600
+
+
+Started GET "/assets/shows-c15e1c77cb5b3534b610348cb9f3c56d.css?body=1" for ::1 at 2014-12-04 16:38:09 -0600
+
+
+Started GET "/assets/static_pages-c15e1c77cb5b3534b610348cb9f3c56d.css?body=1" for ::1 at 2014-12-04 16:38:09 -0600
+
+
+Started GET "/assets/application-6104dfe918f9daf733a0654c847046eb.css?body=1" for ::1 at 2014-12-04 16:38:09 -0600
+
+
+Started GET "/artists" for ::1 at 2014-12-04 16:38:15 -0600
+Processing by StaticPagesController#artists as HTML
+  Rendered static_pages/artists.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 33ms (Views: 33.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2014-12-04 16:38:21 -0600
+Processing by StaticPagesController#login as HTML
+  Rendered static_pages/login.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 62ms (Views: 62.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for ::1 at 2014-12-04 16:38:24 -0600
+Processing by StaticPagesController#signup as HTML
+  Rendered static_pages/signup.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 48ms (Views: 47.3ms | ActiveRecord: 0.0ms)
