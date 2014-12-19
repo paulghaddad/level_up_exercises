@@ -38,6 +38,9 @@ gem 'redcarpet', '~> 3.2.2'
 # Add Pagination
 gem 'kaminari'
 
+# Clearance for user authentication
+gem "clearance"
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
