@@ -1,3 +1,12 @@
+Given(/^I have (\d+) users$/) do |arg1|
+  user_1 = create(:user, first_name: "John", email: "user1@example.com")
+  user_2 = create(:user, first_name: "David", email: "user2@example.com")
+end
+
+Given(/^I am on the users page$/) do
+  visit users_path
+end
+
 When(/^I signup as a user$/) do
   click_link("Signup")
   fill_in("First Name", with: "Paul")
@@ -36,4 +45,9 @@ Then(/^I should see user validation errors$/) do
   expect(page).to have_content("Last name is too short (minimum is 2 characters).")
   expect(page).to have_content("Email can't be blank.")
   expect(page).to have_content("Email is invalid.")
+end
+
+Then(/^I should see all the users$/) do
+  expect(page).to have_content("John")
+  expect(page).to have_content("David")
 end
