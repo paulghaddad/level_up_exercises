@@ -14,6 +14,6 @@ Then(/^a (.+) button$/) do |name|
   expect(page).to have_selector('a', text: name)
 end
 
-Then(/^I should be on the (.+) page$/) do |name|
-  expect(page).to have_selector('h1', text: name)
+Then(/^I should be on the home page$/) do
+  expect(current_path).to eq(root_path)
 end

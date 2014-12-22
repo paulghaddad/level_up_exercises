@@ -6,8 +6,7 @@ Feature: User Accounts
   Scenario: User signs up
     Given I am on the homepage
     When I signup as a user
-    Then I should be on my user page
-    And I should see a message confirming the user was created
+    Then I should see a message to check for email confirmation
 
   Scenario: User signs in with invalid info
     Given I am on the homepage

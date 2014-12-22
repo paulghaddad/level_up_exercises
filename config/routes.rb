@@ -4,8 +4,11 @@ Rails.application.routes.draw do
 
   root 'static_pages#home'
 
-  get 'signup' => 'static_pages#signup'
   get 'login' => 'static_pages#login'
+
+  devise_scope :user do
+    get "signup" => "devise/registrations#new"
+  end
 
   devise_for :users
 
