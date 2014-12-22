@@ -7,6 +7,11 @@ Given(/^I am on the users page$/) do
   visit users_path
 end
 
+Given(/^I am on the page for a user$/) do
+  user_1 = create(:user, first_name: "John", last_name: "Haddad", email: "john@example.com")
+  visit user_path(user_1)
+end
+
 When(/^I signup as a user$/) do
   click_link("Signup")
   fill_in("First Name", with: "Paul")
@@ -27,27 +32,45 @@ When(/^I signup as a user with invalid data$/) do
   click_button("Create Account")
 end
 
+When(/^I edit a user with valid data$/) do
+  user_1 = create(:user, first_name: "John", last_name: "Haddad", email: "john@example.com")
+  visit user_path(user_1)
+  click_link("Edit Account")
+  fill_in("First Name", with: "David")
+  click_button("Update Account")
+end
+
+When(/^I edit an user with invalid data$/) do
+  user_1 = create(:user, first_name: "John", last_name: "Haddad", email: "john@example.com")
+  visit user_path(user_1)
+  click_link("Edit Account")
+  fill_in("First Name", with: "")
+  click_button("Update Account")
+end
+
 Then(/^I should be on my user page$/) do
   expect(page).to have_selector('h1', text: "Your Account")
 end
 
-Then(/^I should see a message confirming the user was created$/) do
-  expect(page).to have_content("Your account was succesfully created!")
+Then(/^I should see a message confirming the user was (.+)$/) do |action|
+  expect(page).to have_content("Your account was successfully #{action}!")
 end
 
 Then(/^I should see user validation errors$/) do
   expect(page).to have_content("The user could not be saved.")
-  expect(page).to have_content("Please correct the 7 errors below:")
-  expect(page).to have_content("Password can't be blank")
-  expect(page).to have_content("First name can't be blank.")
-  expect(page).to have_content("First name is too short (minimum is 2 characters).")
-  expect(page).to have_content("Last name can't be blank.")
-  expect(page).to have_content("Last name is too short (minimum is 2 characters).")
-  expect(page).to have_content("Email can't be blank.")
-  expect(page).to have_content("Email is invalid.")
+  expect(page).to have_content("Please correct")
 end
 
 Then(/^I should see all the users$/) do
   expect(page).to have_content("John")
   expect(page).to have_content("David")
+end
+
+Then(/^I should see the user's information$/) do
+  expect(page).to have_selector('p', text: "John Haddad")
+  expect(page).to have_selector('p', text: "john@example.com")
+end
+
+Then(/^I should see the updated name$/) do
+  expect(page).to have_selector('p', text: "Name: David Haddad")
 end

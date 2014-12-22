@@ -18,3 +18,16 @@ Feature: User Authentication
     Given I have 2 users
     And I am on the users page
     Then I should see all the users
+
+  Scenario: View an individual user
+    Given I am on the page for a user
+    Then I should see the user's information
+
+  Scenario: Update a user with valid attributes
+    When I edit a user with valid data
+    Then I should see the updated name
+    And I should see a message confirming the user was updated
+
+  Scenario: Update a user with invalid attributes
+    When I edit an user with invalid data
+    Then I should see user validation errors
