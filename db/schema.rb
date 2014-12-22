@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141222190847) do
+ActiveRecord::Schema.define(version: 20141222192107) do
 
   create_table "artists", force: true do |t|
     t.string   "first_name"
@@ -55,6 +55,7 @@ ActiveRecord::Schema.define(version: 20141222190847) do
     t.datetime "updated_at"
     t.string   "first_name"
     t.string   "last_name"
+    t.string   "unconfirmed_email"
   end
 
   add_index "users", ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true

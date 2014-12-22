@@ -9,8 +9,8 @@ RSpec.describe User, :type => :model do
       user.first_name = "Paul"
       user.last_name = "Haddad"
       user.email = "paul@example.com"
-      user.password = "secret"
-      user.password_confirmation = "secret"
+      user.password = "rubyonrails"
+      user.password_confirmation = "rubyonrails"
 
       expect(user).to be_valid
     end
@@ -33,8 +33,8 @@ RSpec.describe User, :type => :model do
       user.first_name = "Paul"
       user.last_name = "Haddad"
       user.email = "paul"
-      user.password = "secret"
-      user.password_confirmation = "secret"
+      user.password = "rubyonrails"
+      user.password_confirmation = "rubyonrails"
 
       expect(user).not_to be_valid
     end
@@ -45,7 +45,6 @@ RSpec.describe User, :type => :model do
       it { should validate_presence_of(:last_name) }
       it { should validate_presence_of(:email) }
       it { should validate_uniqueness_of(:email) }
-      it { should have_secure_password }
       it { should ensure_length_of(:password) }
     end
   end
