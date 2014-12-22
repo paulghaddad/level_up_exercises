@@ -4,4 +4,8 @@ class User < ActiveRecord::Base
   validates :first_name, presence: true, length: { minimum: 2 }
   validates :last_name, presence: true, length: { minimum: 2 }
   validates :email, presence: true, uniqueness: { case_sensitive: false }, format: { with: /\A([\w\.%\+\-]+)@([\w\-]+\.)+([\w]{2,})\z/i }
+
+  def full_name
+    "#{first_name.capitalize} #{last_name.capitalize}"
+  end
 end

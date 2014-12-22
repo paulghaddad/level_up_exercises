@@ -39,13 +39,26 @@ RSpec.describe User, :type => :model do
       expect(user).not_to be_valid
     end
 
-    # Validations
+    describe "validations" do
 
-    it { should validate_presence_of(:first_name) }
-    it { should validate_presence_of(:last_name) }
-    it { should validate_presence_of(:email) }
-    it { should validate_uniqueness_of(:email) }
-    it { should have_secure_password }
+      it { should validate_presence_of(:first_name) }
+      it { should validate_presence_of(:last_name) }
+      it { should validate_presence_of(:email) }
+      it { should validate_uniqueness_of(:email) }
+      it { should have_secure_password }
+    end
+  end
 
+  describe "User methods" do
+
+    describe "#full_name" do
+      let(:user) { FactoryGirl.create(:user, first_name: "paul", last_name: "haddad") }
+
+      it "will concatanate the first and last names" do
+        full_name = user.full_name
+
+        expect(full_name).to eq("Paul Haddad")
+      end
+    end
   end
 end
