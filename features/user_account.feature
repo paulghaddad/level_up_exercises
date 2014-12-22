@@ -24,8 +24,7 @@ Feature: User Accounts
 
   Scenario: Update a user with valid attributes
     When I edit a user with valid data
-    Then I should see the updated name
-    And I should see a message confirming the user was updated
+    Then I should see a message confirming the user was updated
 
   Scenario: Update a user with invalid attributes
     When I edit an user with invalid data

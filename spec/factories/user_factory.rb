@@ -5,6 +5,6 @@ FactoryGirl.define do
     email "user@artsy.com"
     password "rubyonrails"
     password_confirmation "rubyonrails"
-    confirmed_at "#{Time.now}"
+    confirmed_at 1.day.ago
   end
 end

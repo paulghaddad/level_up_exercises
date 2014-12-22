@@ -33,18 +33,20 @@ When(/^I signup as a user with invalid data$/) do
 end
 
 When(/^I edit a user with valid data$/) do
-  user_1 = create(:user, first_name: "John", last_name: "Haddad", email: "john@example.com")
-  visit user_path(user_1)
-  click_link("Edit Account")
+  user_1 = create(:user, first_name: "John", last_name: "Haddad", email: "john@example.com", password: "rubyonrails")
+  visit edit_user_registration_path
+  log_in_as(email: "john@example.com", password: "rubyonrails")
   fill_in("First Name", with: "David")
+  fill_in("Current password", with: "rubyonrails")
   click_button("Update Account")
 end
 
 When(/^I edit an user with invalid data$/) do
-  user_1 = create(:user, first_name: "John", last_name: "Haddad", email: "john@example.com")
-  visit user_path(user_1)
-  click_link("Edit Account")
+  user_1 = create(:user, first_name: "John", last_name: "Haddad", email: "john@example.com", password: "rubyonrails")
+  visit edit_user_registration_path
+  log_in_as(email: "john@example.com", password: "rubyonrails")
   fill_in("First Name", with: "")
+  fill_in("Current password", with: "rubyonrails")
   click_button("Update Account")
 end
 
@@ -63,7 +65,7 @@ Then(/^I should see a message to check for email confirmation$/) do
 end
 
 Then(/^I should see a message confirming the user was updated$/) do
-  pending # express the regexp above with the code you wish you had
+  expect(page).to have_content("Your account has been updated successfully.")
 end
 
 Then(/^I should see a message confirming the user was deleted$/) do

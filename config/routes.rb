@@ -10,7 +10,11 @@ Rails.application.routes.draw do
     get "signup" => "devise/registrations#new"
   end
 
-  devise_for :users
+  devise_for :users, controllers: {
+    sessions: 'devise/sessions'
+  }
+
+  resources :users, only: [:index, :show]
 
   resources :artists do
     resources :artworks
