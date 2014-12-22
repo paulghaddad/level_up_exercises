@@ -48,12 +48,18 @@ When(/^I edit an user with invalid data$/) do
   click_button("Update Account")
 end
 
+When(/^I delete a user$/) do
+  user_1 = create(:user, first_name: "John", last_name: "Haddad")
+  visit user_path(user_1)
+  click_link("Delete Account")
+end
+
 Then(/^I should be on my user page$/) do
   expect(page).to have_selector('h1', text: "Your Account")
 end
 
 Then(/^I should see a message confirming the user was (.+)$/) do |action|
-  expect(page).to have_content("Your account was successfully #{action}!")
+  expect(page).to have_content("Your account was successfully #{action}.")
 end
 
 Then(/^I should see user validation errors$/) do
@@ -73,4 +79,8 @@ end
 
 Then(/^I should see the updated name$/) do
   expect(page).to have_selector('p', text: "Name: David Haddad")
+end
+
+Then(/^I should not see the user on the Users page$/) do
+  expect(page).not_to have_content("Paul Haddad")
 end
