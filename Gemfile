@@ -64,6 +64,11 @@ group :development, :test do
 
   # Pry
   gem "pry-rails"
+  gem 'pry-byebug'
+  gem 'pry-stack_explorer'
+  gem 'pry-rescue'
+  gem 'better_errors'
+  gem 'gist'
 
   # Awesome Print
   gem "awesome_print"
@@ -84,6 +89,10 @@ group :test do
   gem 'webmock'
   gem 'vcr'
   gem 'shoulda-matchers'
+end
+
+group :development do
+  gem 'meta_request'
 end
 
 group :production do
