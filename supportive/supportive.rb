@@ -9,16 +9,13 @@ class BlagPost
   DISALLOWED_CATEGORIES = [:selfposts, :gossip, :bildungsromane]
 
   def initialize(args)
-    args = args.inject({}) do |hash, (key, value)|
-      hash[key.to_sym] = value
-      hash
-    end
+    attributes = args.transform_keys { |attribute| attribute.to_sym }
 
-    @author = create_author(args)
-    @categories = validate_category(args[:categories]) || []
-    @comments = Array.wrap(args[:comments])
-    @body = args[:body].squish
-    @publish_date = create_date(args) || Date.today
+    @author = create_author(attributes[:author], attributes[:author_url])
+    @categories = validate_category(attributes[:categories])
+    @comments = Array.wrap(attributes[:comments])
+    @body = attributes[:body].squish
+    @publish_date = create_date(attributes)
   end
 
   def to_s
@@ -27,27 +24,24 @@ class BlagPost
 
   private
 
-  def create_author(args)
-    if args[:author] && args[:author_url]
-      @author = Author.new(args[:author], args[:author_url])
+  def create_author(name, url)
+    if name && url
+      @author = Author.new(name, url)
     end
   end
 
   def create_date(args)
-    args[:publish_date].try(&:to_date)
+    args[:publish_date].try(&:to_date) || Date.today
   end
 
   def byline
-    if author.blank?
-      ""
-    else
-      "By #{author.name}, at #{author.url}"
-    end
+    return '' if author.blank?
+    "By #{author.name}, at #{author.url}"
   end
 
   def validate_category(categories)
     categories.reject do |category|
-      category.in? DISALLOWED_CATEGORIES
+      category.in?(DISALLOWED_CATEGORIES)
     end
   end
 
@@ -55,33 +49,22 @@ class BlagPost
     if categories.empty?
       ""
     else
-      category_titles = categories.map { |category| as_title(category) }
-      "#{pluralizer(categories, 'Category')}: #{category_titles.to_sentence}"
+      category_titles = categories.map { |category| format_title(category) }
+      "#{'Category'.pluralize(categories.size)}: #{category_titles.to_sentence}"
     end
   end
 
-  def pluralizer(object, label)
-    if object.many?
-      label.pluralize
-    else
-      label.singularize
-    end
-  end
-
-  def as_title(string)
-    String(string).humanize.titleize
+  def format_title(title)
+    String(title).humanize.titleize
   end
 
   def commenters
-    if comments_allowed? && comments.length > 0
-      "You will be the #{comments.length.ordinalize} commenter"
-    else
-      ''
-    end
+    return '' unless comments_allowed? && comments.length > 0
+    "You will be the #{comments.length.ordinalize} commenter"
   end
 
   def comments_allowed?
-    publish_date > Date.today.years_ago(3)
+    publish_date > 3.years.ago
   end
 
   def abstract
