@@ -1,14 +1,14 @@
-# Level Up Exercises
+## PeteMail
 
-These are the combined exercises used at http://leveluprails.herokuapp.com. You can do them out of sequence, but you'll probably be missing the point. Do the right thing, visit the site.
+Hot off his last two victories, Peteshow and Petelab, our favorite protagonist is looking for more industries to revolutionize. Frustrated with the existing level of vim keybinding support in his mail client, it's time to introduce Pmail. Unfortunately, Pete's dotfiles are acting up again, so you're going to need to write the UI while he fiddles with them.
 
-## How to Do These Exercises
+## Requirements
 
-1. Fork this repo into your own space
-2. Wait until you're asked to do one of the exercises
-3. Use your fork, develop code, push it back upward
-4. Profit!
+Pete needs the HTML, CSS and Javascript for a basic Gmail lookalike. You don't have to use any fancy precompilers like Coffee or HAML, but props if you feel like doing it anyway. Take a look at the Gmail interface and clone away. If you've never seen the Gmail interface... I don't believe you. Just do it.
 
-## The First Lesson
-
-Like everything else in the world, these exercises have errors and problems and typos. We experience this problem whenever we code, and the only way to stay sane as a group is to fix problems as we find them. Be a mensch, send pull requests.
+Functionality:
+* You don't need a backend for this system, a straightforward HTML mockup will do the trick. Pete's messing with Ember and who knows when that's going to be done, so all your backend would get thrown away anyway.
+* A basic inbox layout, with links to folders etc in the sidebar. Don't worry about making them functional yet, but give them dapper looking hover states. Business users love that shit.
+* Add a dropdown menu for the user's profile that opens on hover and allows them to Log out, view their settings, etc.
+* Your content, structure and behavior should be properly separated. 
+* If you can figure it out, add keyboard commands to navigate up and down selecting the "current" email row.
