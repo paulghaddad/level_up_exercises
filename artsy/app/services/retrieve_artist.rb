@@ -31,6 +31,7 @@ class RetrieveArtist
   def params
     first_name = artist_params['name'].split(' ')[0]
     last_name = artist_params['name'].split(' ')[1..-1].join(' ')
+
     {
       api_id: artist_params['id'],
       first_name: first_name,
