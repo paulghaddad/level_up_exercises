@@ -4,9 +4,7 @@ class RetrieveArtworks
 
   def initialize(url, artist)
     @artist = artist
-    @link = ArtsyApiWrapper.get_artworks_from_artist(url)
-    @artwork_collection = link["_embedded"]["artworks"]
-    build_artworks unless artwork_collection.empty?
+    artwork_link_attributes(url)
   end
 
   private
@@ -20,9 +18,7 @@ class RetrieveArtworks
 
   def next_set_of_artworks
     next_url = link["_links"]["next"]["href"]
-    @link = ArtsyApiWrapper.get_artworks_from_artist(next_url)
-    @artwork_collection = link["_embedded"]["artworks"]
-    build_artworks unless artwork_collection.empty?
+    artwork_link_attributes(next_url)
   end
 
   def create_new_artwork(artwork)
@@ -31,8 +27,7 @@ class RetrieveArtworks
   end
 
   def params(artwork)
-    params = Hash.new
-    params[:artwork] = {
+    {
       title: artwork["title"],
       date: artwork["date"],
       thumbnail: artwork["_links"]["thumbnail"]["href"]
@@ -41,5 +36,11 @@ class RetrieveArtworks
 
   def next_link_exist?
     link["_links"]["next"]["href"]
+  end
+
+  def artwork_link_attributes(url)
+    @link = ArtsyApiWrapper.get_artworks_from_artist(url)
+    @artwork_collection = link["_embedded"]["artworks"]
+    build_artworks unless artwork_collection.empty?
   end
 end

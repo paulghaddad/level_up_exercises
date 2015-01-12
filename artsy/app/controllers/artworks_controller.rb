@@ -7,9 +7,6 @@ class ArtworksController < ApplicationController
     @artworks = @artist.artworks.all.page params[:page]
   end
 
-  def show
-  end
-
   def new
     @artwork = @artist.artworks.new
   end
@@ -21,11 +18,8 @@ class ArtworksController < ApplicationController
       redirect_to artist_artwork_url(@artist, @artwork)
     else
       flash[:success] = "The artwork could not be saved."
-      render 'new'
+      render "new"
     end
-  end
-
-  def edit
   end
 
   def update
@@ -33,7 +27,7 @@ class ArtworksController < ApplicationController
       flash[:success] = "The artwork was successfully updated."
       redirect_to artist_artwork_url(@artist, @artwork)
     else
-      render 'edit'
+      render "edit"
     end
   end
 

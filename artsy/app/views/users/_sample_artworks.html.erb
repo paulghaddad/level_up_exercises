@@ -1,0 +1,8 @@
+<% if @user.sample_artworks.any? %>
+  <section class="artworks-list">
+    <h2>Some works by my favorite artists:</h2>
+    <% @user.sample_artworks.each do |artwork| %>
+      <%= image_tag(artwork.thumbnail) %>
+    <% end %>
+  </section>
+<% end %>

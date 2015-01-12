@@ -22,11 +22,8 @@ class ArtistsController < ApplicationController
       flash[:success] = "The artist was successfully created."
       redirect_to artist_url(@artist)
     else
-      render 'new'
+      render "new"
     end
-  end
-
-  def edit
   end
 
   def update
@@ -34,7 +31,7 @@ class ArtistsController < ApplicationController
       flash[:success] = "The artist was successfully updated."
       redirect_to artist_url(@artist)
     else
-      render 'edit'
+      render "edit"
     end
   end
 

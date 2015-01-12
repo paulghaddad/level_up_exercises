@@ -13,17 +13,6 @@ RSpec.describe UsersController, :type => :controller do
         expect(response).to redirect_to(new_user_session_url)
       end
     end
-
-    context "when user is logged in" do
-
-        it "can access user index page" do
-          create_and_sign_in_user
-
-          get :index
-
-          expect(response).to be_success
-        end
-    end
   end
 
   describe "GET #show" do
@@ -36,17 +25,6 @@ RSpec.describe UsersController, :type => :controller do
 
         expect(response).to redirect_to(new_user_session_url)
       end
-    end
-
-    context "when user is logged in" do
-
-        it "can access their user show page" do
-          sign_in_user(user)
-
-          get :show, { id: user.id }
-
-          expect(response).to be_success
-        end
     end
   end
 end

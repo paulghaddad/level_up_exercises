@@ -2,6 +2,21 @@ require 'rails_helper'
 
 RSpec.describe User, :type => :model do
 
+  describe "validations" do
+
+    it { should validate_presence_of(:first_name) }
+    it { should validate_presence_of(:last_name) }
+    it { should validate_presence_of(:email) }
+    it { should validate_uniqueness_of(:email) }
+    it { should validate_presence_of(:password) }
+  end
+
+  describe "associations" do
+
+    it { should have_many(:favorites) }
+    it { should have_many(:favorite_artists) }
+  end
+
   describe "Create new user" do
 
     it "validates a new valid user" do
@@ -56,29 +71,6 @@ RSpec.describe User, :type => :model do
       user = User.create(email: "paul@example.com", password: "secret1", password_confirmation: "secret2")
 
       expect(user.admin?).to be false
-    end
-
-    describe "validations" do
-
-      it { should validate_presence_of(:first_name) }
-      it { should validate_presence_of(:last_name) }
-      it { should validate_presence_of(:email) }
-      it { should validate_uniqueness_of(:email) }
-      it { should validate_presence_of(:password) }
-    end
-
-    describe "associations" do
-      let(:user) { create(:user) }
-      let(:artist) { create(:artist) }
-
-      it "has favorite artists" do
-        user.favorite_artists << artist
-
-        expect(user.favorite_artists.size).to eq(1)
-      end
-
-      it { should have_many(:favorites) }
-      it { should have_many(:favorite_artists) }
     end
 
     describe "#full_name" do
