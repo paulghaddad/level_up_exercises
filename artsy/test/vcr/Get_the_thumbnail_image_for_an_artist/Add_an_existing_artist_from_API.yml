@@ -12,7 +12,7 @@ http_interactions:
       Accept:
       - application/vnd.artsy-v2+json
       X-Xapp-Token:
-      - JvTPWe4WsQO-xqX6Bts49jiOpRNLY4AZe8oTj7EwHWopdD0uddCEwumjpTi-btEykT1GRijM-j5w0CJAZNXWZecCBhSsrD3kC0v4J9o8F4e76Qt6_ydSvFaBLoQ_8K7M6S4Sj0ybe34_WE10dK64oitlCVDJ2PCEaPxQSoQiI1jOcGVT7MSNlc-0jPKOrF5kMLsW7uvaelUq7y0gzcSVbg4KP7wwokULfYFxbcVXdXs=
+      - JvTPWe4WsQO-xqX6Bts49pwAqgkdjUbU-ydolFAGbIIQcABfQhxrBWAlULrRWpkWAvQWjNZgrEDA3V53fl9dXzL-MEpoVs5rT4M8_WhFmqO1pd5yKhgXyxSXZ-VrQZH8pQGUXJb-aY81sFhsCY8dhbejylTsMDtYVvXJaIUZ2O709_e6uy6RKNsnCg6HbmGUbjsRkikYa6LMCreB_m4sf_1TXpkpBWxNEIgQesznmGs=
       User-Agent:
       - Faraday v0.9.0
       Accept-Encoding:
@@ -27,7 +27,7 @@ http_interactions:
       Content-Type:
       - application/json
       Date:
-      - Wed, 31 Dec 2014 18:15:02 GMT
+      - Mon, 12 Jan 2015 15:45:23 GMT
       Etag:
       - '"8d485dd29e0ece06db8ce4b8e93b8269"'
       Expires:
@@ -43,11 +43,11 @@ http_interactions:
       X-Frame-Options:
       - DENY
       X-Request-Id:
-      - e14b9b09-5592-4c99-88fe-32457faf04d9
+      - 3f89cd9a-845a-4fea-a7fe-cd92c6cfbef6
       X-Robots-Tag:
       - noindex
       X-Runtime:
-      - '0.016979'
+      - '0.014918'
       Content-Length:
       - '381'
       Connection:
@@ -56,7 +56,7 @@ http_interactions:
       encoding: UTF-8
       string: '{"_links":{"self":{"href":"https://api.artsy.net/api/"},"docs":{"href":"https://api.artsy.net/api/docs"},"status":{"href":"https://api.artsy.net/api/status"},"search":{"href":"https://api.artsy.net/api/search{?q}","templated":true},"current_user":{"href":"https://api.artsy.net/api/current_user"},"artists":{"href":"https://api.artsy.net/api/artists{?artwork_id,similar_to_artist_id,similarity_type}","templated":true},"artist":{"href":"https://api.artsy.net/api/artists/{id}","templated":true},"users":{"href":"https://api.artsy.net/api/users"},"user":{"href":"https://api.artsy.net/api/users/{id}","templated":true},"profiles":{"href":"https://api.artsy.net/api/profiles"},"profile":{"href":"https://api.artsy.net/api/profiles/{id}","templated":true},"collections":{"href":"https://api.artsy.net/api/collections{?user_id,private}","templated":true},"collection":{"href":"https://api.artsy.net/api/collections/{id}","templated":true},"collection_items":{"href":"https://api.artsy.net/api/collection_items{?user_id,collection_id}","templated":true},"collection_item":{"href":"https://api.artsy.net/api/collection_items/{id}","templated":true},"applications":{"href":"https://api.artsy.net/api/applications"},"application":{"href":"https://api.artsy.net/api/applications/{id}","templated":true},"genes":{"href":"https://api.artsy.net/api/genes{?artist_id,artwork_id}","templated":true},"gene":{"href":"https://api.artsy.net/api/genes/{id}","templated":true},"partners":{"href":"https://api.artsy.net/api/partners"},"partner":{"href":"https://api.artsy.net/api/partners/{id}","templated":true},"shows":{"href":"https://api.artsy.net/api/shows{?partner_id,status}","templated":true},"show":{"href":"https://api.artsy.net/api/shows/{id}","templated":true},"artworks":{"href":"https://api.artsy.net/api/artworks{?artist_id,partner_id,show_id,similar_to_artwork_id,published}","templated":true},"artwork":{"href":"https://api.artsy.net/api/artworks/{id}","templated":true},"edition":{"href":"https://api.artsy.net/api/editions/{id}{?artwork_id}","templated":true},"tokens":{"href":"https://api.artsy.net/api/tokens"}}}'
     http_version: 
-  recorded_at: Wed, 31 Dec 2014 18:15:01 GMT
+  recorded_at: Mon, 12 Jan 2015 15:45:26 GMT
 - request:
     method: get
     uri: https://api.artsy.net/api/artists/pablo-picasso
@@ -69,7 +69,7 @@ http_interactions:
       Accept:
       - application/vnd.artsy-v2+json
       X-Xapp-Token:
-      - JvTPWe4WsQO-xqX6Bts49jiOpRNLY4AZe8oTj7EwHWopdD0uddCEwumjpTi-btEykT1GRijM-j5w0CJAZNXWZecCBhSsrD3kC0v4J9o8F4e76Qt6_ydSvFaBLoQ_8K7M6S4Sj0ybe34_WE10dK64oitlCVDJ2PCEaPxQSoQiI1jOcGVT7MSNlc-0jPKOrF5kMLsW7uvaelUq7y0gzcSVbg4KP7wwokULfYFxbcVXdXs=
+      - JvTPWe4WsQO-xqX6Bts49pwAqgkdjUbU-ydolFAGbIIQcABfQhxrBWAlULrRWpkWAvQWjNZgrEDA3V53fl9dXzL-MEpoVs5rT4M8_WhFmqO1pd5yKhgXyxSXZ-VrQZH8pQGUXJb-aY81sFhsCY8dhbejylTsMDtYVvXJaIUZ2O709_e6uy6RKNsnCg6HbmGUbjsRkikYa6LMCreB_m4sf_1TXpkpBWxNEIgQesznmGs=
       User-Agent:
       - Faraday v0.9.0
       Accept-Encoding:
@@ -84,7 +84,7 @@ http_interactions:
       Content-Type:
       - application/json
       Date:
-      - Wed, 31 Dec 2014 18:15:02 GMT
+      - Mon, 12 Jan 2015 15:45:24 GMT
       Location:
       - https://api.artsy.net/api/artists/4d8b928b4eb68a1b2c0001f2
       Server:
@@ -98,11 +98,11 @@ http_interactions:
       X-Frame-Options:
       - DENY
       X-Request-Id:
-      - 91eefb3a-cfdc-4fe4-a013-968e7eee2e93
+      - d05030e6-c095-4297-95c7-5016b9991716
       X-Robots-Tag:
       - noindex
       X-Runtime:
-      - '0.029746'
+      - '0.022762'
       Content-Length:
       - '108'
       Connection:
@@ -111,7 +111,7 @@ http_interactions:
       encoding: UTF-8
       string: '{"_links":{"location":{"href":"https://api.artsy.net/api/artists/4d8b928b4eb68a1b2c0001f2"}}}'
     http_version: 
-  recorded_at: Wed, 31 Dec 2014 18:15:01 GMT
+  recorded_at: Mon, 12 Jan 2015 15:45:26 GMT
 - request:
     method: get
     uri: https://api.artsy.net/api/artists/4d8b928b4eb68a1b2c0001f2
@@ -124,7 +124,7 @@ http_interactions:
       Accept:
       - application/vnd.artsy-v2+json
       X-Xapp-Token:
-      - JvTPWe4WsQO-xqX6Bts49jiOpRNLY4AZe8oTj7EwHWopdD0uddCEwumjpTi-btEykT1GRijM-j5w0CJAZNXWZecCBhSsrD3kC0v4J9o8F4e76Qt6_ydSvFaBLoQ_8K7M6S4Sj0ybe34_WE10dK64oitlCVDJ2PCEaPxQSoQiI1jOcGVT7MSNlc-0jPKOrF5kMLsW7uvaelUq7y0gzcSVbg4KP7wwokULfYFxbcVXdXs=
+      - JvTPWe4WsQO-xqX6Bts49pwAqgkdjUbU-ydolFAGbIIQcABfQhxrBWAlULrRWpkWAvQWjNZgrEDA3V53fl9dXzL-MEpoVs5rT4M8_WhFmqO1pd5yKhgXyxSXZ-VrQZH8pQGUXJb-aY81sFhsCY8dhbejylTsMDtYVvXJaIUZ2O709_e6uy6RKNsnCg6HbmGUbjsRkikYa6LMCreB_m4sf_1TXpkpBWxNEIgQesznmGs=
       User-Agent:
       - Faraday v0.9.0
       Accept-Encoding:
@@ -139,9 +139,9 @@ http_interactions:
       Content-Type:
       - application/json
       Date:
-      - Wed, 31 Dec 2014 18:15:02 GMT
+      - Mon, 12 Jan 2015 15:45:24 GMT
       Etag:
-      - '"0a98930f6d778b5f1d54a2d1fc62131a"'
+      - '"95a5dd983670a7cf7b47ce8eb8b94fae"'
       Expires:
       - 1970-01-01 00:00:00 UTC
       Server:
@@ -155,13 +155,13 @@ http_interactions:
       X-Frame-Options:
       - DENY
       X-Request-Id:
-      - 76f3b501-82d9-4788-898f-60e0f8ef6e9c
+      - 451238f3-5cdf-40a8-8ea7-9e32ddb2ff9e
       X-Robots-Tag:
       - noindex
       X-Runtime:
-      - '0.018541'
+      - '0.017016'
       Content-Length:
-      - '2537'
+      - '2539'
       Connection:
       - keep-alive
     body:
@@ -169,7 +169,7 @@ http_interactions:
       string: !binary |-
         eyJpZCI6IjRkOGI5MjhiNGViNjhhMWIyYzAwMDFmMiIsImNyZWF0ZWRfYXQi
         OiIyMDEwLTA4LTAzVDE2OjA5OjMzKzAwOjAwIiwidXBkYXRlZF9hdCI6IjIw
-        MTQtMTItMzFUMTI6MTU6NDArMDA6MDAiLCJuYW1lIjoiUGFibG8gUGljYXNz
+        MTUtMDEtMTJUMDg6NDY6MzArMDA6MDAiLCJuYW1lIjoiUGFibG8gUGljYXNz
         byIsImdlbmRlciI6Im1hbGUiLCJiaXJ0aGRheSI6IjE4ODEiLCJob21ldG93
         biI6Ik3DoWxhZ2EsIFNwYWluIiwibG9jYXRpb24iOiJQYXJpcyBhbmQgTW91
         Z2lucywgRnJhbmNlIiwibmF0aW9uYWxpdHkiOiJTcGFuaXNoIiwic3RhdGVt
@@ -277,20 +277,21 @@ http_interactions:
         ez9pbWFnZV92ZXJzaW9ufS5qcGciLCJ0ZW1wbGF0ZWQiOnRydWV9LCJzZWxm
         Ijp7ImhyZWYiOiJodHRwczovL2FwaS5hcnRzeS5uZXQvYXBpL2FydGlzdHMv
         NGQ4YjkyOGI0ZWI2OGExYjJjMDAwMWYyIn0sInBlcm1hbGluayI6eyJocmVm
-        IjoiaHR0cDovL2FydHN5Lm5ldC9hcnRpc3QvcGFibG8tcGljYXNzbyJ9LCJh
-        cnR3b3JrcyI6eyJocmVmIjoiaHR0cHM6Ly9hcGkuYXJ0c3kubmV0L2FwaS9h
-        cnR3b3Jrcz9hcnRpc3RfaWQ9NGQ4YjkyOGI0ZWI2OGExYjJjMDAwMWYyIn0s
-        InNpbWlsYXJfYXJ0aXN0cyI6eyJocmVmIjoiaHR0cHM6Ly9hcGkuYXJ0c3ku
-        bmV0L2FwaS9hcnRpc3RzP3NpbWlsYXJfdG9fYXJ0aXN0X2lkPTRkOGI5Mjhi
-        NGViNjhhMWIyYzAwMDFmMiJ9LCJzaW1pbGFyX2NvbnRlbXBvcmFyeV9hcnRp
-        c3RzIjp7ImhyZWYiOiJodHRwczovL2FwaS5hcnRzeS5uZXQvYXBpL2FydGlz
-        dHM/c2ltaWxhcl90b19hcnRpc3RfaWQ9NGQ4YjkyOGI0ZWI2OGExYjJjMDAw
-        MWYyJnNpbWlsYXJpdHlfdHlwZT1jb250ZW1wb3JhcnkifSwiZ2VuZXMiOnsi
-        aHJlZiI6Imh0dHBzOi8vYXBpLmFydHN5Lm5ldC9hcGkvZ2VuZXM/YXJ0aXN0
-        X2lkPTRkOGI5MjhiNGViNjhhMWIyYzAwMDFmMiJ9fSwiaW1hZ2VfdmVyc2lv
-        bnMiOlsic3F1YXJlIiwidGFsbCIsImxhcmdlIiwiZm91cl90aGlyZHMiXX0=
+        IjoiaHR0cDovL3d3dy5hcnRzeS5uZXQvYXJ0aXN0L3BhYmxvLXBpY2Fzc28i
+        fSwiYXJ0d29ya3MiOnsiaHJlZiI6Imh0dHBzOi8vYXBpLmFydHN5Lm5ldC9h
+        cGkvYXJ0d29ya3M/YXJ0aXN0X2lkPTRkOGI5MjhiNGViNjhhMWIyYzAwMDFm
+        MiJ9LCJzaW1pbGFyX2FydGlzdHMiOnsiaHJlZiI6Imh0dHBzOi8vYXBpLmFy
+        dHN5Lm5ldC9hcGkvYXJ0aXN0cz9zaW1pbGFyX3RvX2FydGlzdF9pZD00ZDhi
+        OTI4YjRlYjY4YTFiMmMwMDAxZjIifSwic2ltaWxhcl9jb250ZW1wb3Jhcnlf
+        YXJ0aXN0cyI6eyJocmVmIjoiaHR0cHM6Ly9hcGkuYXJ0c3kubmV0L2FwaS9h
+        cnRpc3RzP3NpbWlsYXJfdG9fYXJ0aXN0X2lkPTRkOGI5MjhiNGViNjhhMWIy
+        YzAwMDFmMiZzaW1pbGFyaXR5X3R5cGU9Y29udGVtcG9yYXJ5In0sImdlbmVz
+        Ijp7ImhyZWYiOiJodHRwczovL2FwaS5hcnRzeS5uZXQvYXBpL2dlbmVzP2Fy
+        dGlzdF9pZD00ZDhiOTI4YjRlYjY4YTFiMmMwMDAxZjIifX0sImltYWdlX3Zl
+        cnNpb25zIjpbInNxdWFyZSIsInRhbGwiLCJsYXJnZSIsImZvdXJfdGhpcmRz
+        Il19
     http_version: 
-  recorded_at: Wed, 31 Dec 2014 18:15:01 GMT
+  recorded_at: Mon, 12 Jan 2015 15:45:26 GMT
 - request:
     method: get
     uri: https://api.artsy.net/api/artworks?artist_id=4d8b928b4eb68a1b2c0001f2
@@ -303,7 +304,7 @@ http_interactions:
       Accept:
       - application/vnd.artsy-v2+json
       X-Xapp-Token:
-      - JvTPWe4WsQO-xqX6Bts49jiOpRNLY4AZe8oTj7EwHWopdD0uddCEwumjpTi-btEykT1GRijM-j5w0CJAZNXWZecCBhSsrD3kC0v4J9o8F4e76Qt6_ydSvFaBLoQ_8K7M6S4Sj0ybe34_WE10dK64oitlCVDJ2PCEaPxQSoQiI1jOcGVT7MSNlc-0jPKOrF5kMLsW7uvaelUq7y0gzcSVbg4KP7wwokULfYFxbcVXdXs=
+      - JvTPWe4WsQO-xqX6Bts49pwAqgkdjUbU-ydolFAGbIIQcABfQhxrBWAlULrRWpkWAvQWjNZgrEDA3V53fl9dXzL-MEpoVs5rT4M8_WhFmqO1pd5yKhgXyxSXZ-VrQZH8pQGUXJb-aY81sFhsCY8dhbejylTsMDtYVvXJaIUZ2O709_e6uy6RKNsnCg6HbmGUbjsRkikYa6LMCreB_m4sf_1TXpkpBWxNEIgQesznmGs=
       User-Agent:
       - Faraday v0.9.0
       Accept-Encoding:
@@ -318,9 +319,9 @@ http_interactions:
       Content-Type:
       - application/json
       Date:
-      - Wed, 31 Dec 2014 18:15:02 GMT
+      - Mon, 12 Jan 2015 15:45:24 GMT
       Etag:
-      - '"6adeb2a43abdacc948c84c23d741be8c"'
+      - '"eca7bac90622a2d6411f980645cd6b83"'
       Expires:
       - 1970-01-01 00:00:00 UTC
       Server:
@@ -334,13 +335,13 @@ http_interactions:
       X-Frame-Options:
       - DENY
       X-Request-Id:
-      - dc8e4f05-6183-4752-82e6-c2b26cc916ce
+      - b68fa39f-9d35-4099-91c6-c34531586acd
       X-Robots-Tag:
       - noindex
       X-Runtime:
-      - '0.045179'
+      - '0.041759'
       Content-Length:
-      - '922'
+      - '924'
       Connection:
       - keep-alive
     body:
@@ -382,21 +383,21 @@ http_interactions:
         Imh0dHBzOi8vYXBpLmFydHN5Lm5ldC9hcGkvcGFydG5lcnMvNGY5OWM3Yjc5
         M2FiNGIwMDAxMDAwMTc5In0sInNlbGYiOnsiaHJlZiI6Imh0dHBzOi8vYXBp
         LmFydHN5Lm5ldC9hcGkvYXJ0d29ya3MvNTE1YjBmOTMzOGFkMmQ3OGNhMDAw
-        NTU0In0sInBlcm1hbGluayI6eyJocmVmIjoiaHR0cDovL2FydHN5Lm5ldC9h
-        cnR3b3JrL3BhYmxvLXBpY2Fzc28tdGhlLWZydWdhbC1yZXBhc3QtbGUtcmVw
-        YXMtZnJ1Z2FsIn0sImdlbmVzIjp7ImhyZWYiOiJodHRwczovL2FwaS5hcnRz
-        eS5uZXQvYXBpL2dlbmVzP2FydHdvcmtfaWQ9NTE1YjBmOTMzOGFkMmQ3OGNh
-        MDAwNTU0In0sImFydGlzdHMiOnsiaHJlZiI6Imh0dHBzOi8vYXBpLmFydHN5
-        Lm5ldC9hcGkvYXJ0aXN0cz9hcnR3b3JrX2lkPTUxNWIwZjkzMzhhZDJkNzhj
-        YTAwMDU1NCJ9LCJzaW1pbGFyX2FydHdvcmtzIjp7ImhyZWYiOiJodHRwczov
-        L2FwaS5hcnRzeS5uZXQvYXBpL2FydHdvcmtzP3NpbWlsYXJfdG9fYXJ0d29y
-        a19pZD01MTViMGY5MzM4YWQyZDc4Y2EwMDA1NTQifX0sImltYWdlX3ZlcnNp
-        b25zIjpbInNtYWxsIiwic3F1YXJlIiwibWVkaXVtIiwibWVkaXVtX3JlY3Rh
-        bmdsZSIsImxhcmdlX3JlY3RhbmdsZSIsInRhbGwiLCJsYXJnZSIsImxhcmdl
-        ciIsIm5vcm1hbGl6ZWQiXSwiX2VtYmVkZGVkIjp7ImVkaXRpb25zIjpbXX19
-        XX19
+        NTU0In0sInBlcm1hbGluayI6eyJocmVmIjoiaHR0cDovL3d3dy5hcnRzeS5u
+        ZXQvYXJ0d29yay9wYWJsby1waWNhc3NvLXRoZS1mcnVnYWwtcmVwYXN0LWxl
+        LXJlcGFzLWZydWdhbCJ9LCJnZW5lcyI6eyJocmVmIjoiaHR0cHM6Ly9hcGku
+        YXJ0c3kubmV0L2FwaS9nZW5lcz9hcnR3b3JrX2lkPTUxNWIwZjkzMzhhZDJk
+        NzhjYTAwMDU1NCJ9LCJhcnRpc3RzIjp7ImhyZWYiOiJodHRwczovL2FwaS5h
+        cnRzeS5uZXQvYXBpL2FydGlzdHM/YXJ0d29ya19pZD01MTViMGY5MzM4YWQy
+        ZDc4Y2EwMDA1NTQifSwic2ltaWxhcl9hcnR3b3JrcyI6eyJocmVmIjoiaHR0
+        cHM6Ly9hcGkuYXJ0c3kubmV0L2FwaS9hcnR3b3Jrcz9zaW1pbGFyX3RvX2Fy
+        dHdvcmtfaWQ9NTE1YjBmOTMzOGFkMmQ3OGNhMDAwNTU0In19LCJpbWFnZV92
+        ZXJzaW9ucyI6WyJzbWFsbCIsInNxdWFyZSIsIm1lZGl1bSIsIm1lZGl1bV9y
+        ZWN0YW5nbGUiLCJsYXJnZV9yZWN0YW5nbGUiLCJ0YWxsIiwibGFyZ2UiLCJs
+        YXJnZXIiLCJub3JtYWxpemVkIl0sIl9lbWJlZGRlZCI6eyJlZGl0aW9ucyI6
+        W119fV19fQ==
     http_version: 
-  recorded_at: Wed, 31 Dec 2014 18:15:01 GMT
+  recorded_at: Mon, 12 Jan 2015 15:45:27 GMT
 - request:
     method: get
     uri: https://api.artsy.net/api/artworks?artist_id=4d8b928b4eb68a1b2c0001f2&cursor=515b0f9338ad2d78ca000554:515b0f9338ad2d78ca000554
@@ -409,7 +410,7 @@ http_interactions:
       Accept:
       - application/vnd.artsy-v2+json
       X-Xapp-Token:
-      - JvTPWe4WsQO-xqX6Bts49jiOpRNLY4AZe8oTj7EwHWopdD0uddCEwumjpTi-btEykT1GRijM-j5w0CJAZNXWZecCBhSsrD3kC0v4J9o8F4e76Qt6_ydSvFaBLoQ_8K7M6S4Sj0ybe34_WE10dK64oitlCVDJ2PCEaPxQSoQiI1jOcGVT7MSNlc-0jPKOrF5kMLsW7uvaelUq7y0gzcSVbg4KP7wwokULfYFxbcVXdXs=
+      - JvTPWe4WsQO-xqX6Bts49pwAqgkdjUbU-ydolFAGbIIQcABfQhxrBWAlULrRWpkWAvQWjNZgrEDA3V53fl9dXzL-MEpoVs5rT4M8_WhFmqO1pd5yKhgXyxSXZ-VrQZH8pQGUXJb-aY81sFhsCY8dhbejylTsMDtYVvXJaIUZ2O709_e6uy6RKNsnCg6HbmGUbjsRkikYa6LMCreB_m4sf_1TXpkpBWxNEIgQesznmGs=
       User-Agent:
       - Faraday v0.9.0
       Accept-Encoding:
@@ -424,7 +425,7 @@ http_interactions:
       Content-Type:
       - application/json
       Date:
-      - Wed, 31 Dec 2014 18:15:02 GMT
+      - Mon, 12 Jan 2015 15:45:24 GMT
       Etag:
       - '"b2c46ee89b3e73c892e852f9bbdb5572"'
       Expires:
@@ -440,11 +441,11 @@ http_interactions:
       X-Frame-Options:
       - DENY
       X-Request-Id:
-      - cd10c122-4b37-4cfc-8cd3-f114f6093ffd
+      - d843f538-a0f3-49a8-ab51-d39358d9e133
       X-Robots-Tag:
       - noindex
       X-Runtime:
-      - '0.028588'
+      - '0.031903'
       Content-Length:
       - '180'
       Connection:
@@ -453,7 +454,7 @@ http_interactions:
       encoding: UTF-8
       string: '{"total_count":null,"_links":{"self":{"href":"https://api.artsy.net/api/artworks?artist_id=4d8b928b4eb68a1b2c0001f2&cursor=515b0f9338ad2d78ca000554%3A515b0f9338ad2d78ca000554"}},"_embedded":{"artworks":[]}}'
     http_version: 
-  recorded_at: Wed, 31 Dec 2014 18:15:01 GMT
+  recorded_at: Mon, 12 Jan 2015 15:45:27 GMT
 - request:
     method: get
     uri: https://api.artsy.net/api
@@ -466,7 +467,7 @@ http_interactions:
       Accept:
       - application/vnd.artsy-v2+json
       X-Xapp-Token:
-      - JvTPWe4WsQO-xqX6Bts49jiOpRNLY4AZe8oTj7EwHWopdD0uddCEwumjpTi-btEykT1GRijM-j5w0CJAZNXWZecCBhSsrD3kC0v4J9o8F4e76Qt6_ydSvFaBLoQ_8K7M6S4Sj0ybe34_WE10dK64oitlCVDJ2PCEaPxQSoQiI1jOcGVT7MSNlc-0jPKOrF5kMLsW7uvaelUq7y0gzcSVbg4KP7wwokULfYFxbcVXdXs=
+      - JvTPWe4WsQO-xqX6Bts49pwAqgkdjUbU-ydolFAGbIIQcABfQhxrBWAlULrRWpkWAvQWjNZgrEDA3V53fl9dXzL-MEpoVs5rT4M8_WhFmqO1pd5yKhgXyxSXZ-VrQZH8pQGUXJb-aY81sFhsCY8dhbejylTsMDtYVvXJaIUZ2O709_e6uy6RKNsnCg6HbmGUbjsRkikYa6LMCreB_m4sf_1TXpkpBWxNEIgQesznmGs=
       User-Agent:
       - Faraday v0.9.0
       Accept-Encoding:
@@ -481,7 +482,7 @@ http_interactions:
       Content-Type:
       - application/json
       Date:
-      - Wed, 31 Dec 2014 18:15:03 GMT
+      - Mon, 12 Jan 2015 15:45:24 GMT
       Etag:
       - '"8d485dd29e0ece06db8ce4b8e93b8269"'
       Expires:
@@ -497,11 +498,11 @@ http_interactions:
       X-Frame-Options:
       - DENY
       X-Request-Id:
-      - 030d0b7e-0a2d-491a-ad18-99e21198721d
+      - 0f64faa8-8267-4c86-b0fc-07adcf4104f6
       X-Robots-Tag:
       - noindex
       X-Runtime:
-      - '0.033219'
+      - '0.013676'
       Content-Length:
       - '381'
       Connection:
@@ -510,7 +511,7 @@ http_interactions:
       encoding: UTF-8
       string: '{"_links":{"self":{"href":"https://api.artsy.net/api/"},"docs":{"href":"https://api.artsy.net/api/docs"},"status":{"href":"https://api.artsy.net/api/status"},"search":{"href":"https://api.artsy.net/api/search{?q}","templated":true},"current_user":{"href":"https://api.artsy.net/api/current_user"},"artists":{"href":"https://api.artsy.net/api/artists{?artwork_id,similar_to_artist_id,similarity_type}","templated":true},"artist":{"href":"https://api.artsy.net/api/artists/{id}","templated":true},"users":{"href":"https://api.artsy.net/api/users"},"user":{"href":"https://api.artsy.net/api/users/{id}","templated":true},"profiles":{"href":"https://api.artsy.net/api/profiles"},"profile":{"href":"https://api.artsy.net/api/profiles/{id}","templated":true},"collections":{"href":"https://api.artsy.net/api/collections{?user_id,private}","templated":true},"collection":{"href":"https://api.artsy.net/api/collections/{id}","templated":true},"collection_items":{"href":"https://api.artsy.net/api/collection_items{?user_id,collection_id}","templated":true},"collection_item":{"href":"https://api.artsy.net/api/collection_items/{id}","templated":true},"applications":{"href":"https://api.artsy.net/api/applications"},"application":{"href":"https://api.artsy.net/api/applications/{id}","templated":true},"genes":{"href":"https://api.artsy.net/api/genes{?artist_id,artwork_id}","templated":true},"gene":{"href":"https://api.artsy.net/api/genes/{id}","templated":true},"partners":{"href":"https://api.artsy.net/api/partners"},"partner":{"href":"https://api.artsy.net/api/partners/{id}","templated":true},"shows":{"href":"https://api.artsy.net/api/shows{?partner_id,status}","templated":true},"show":{"href":"https://api.artsy.net/api/shows/{id}","templated":true},"artworks":{"href":"https://api.artsy.net/api/artworks{?artist_id,partner_id,show_id,similar_to_artwork_id,published}","templated":true},"artwork":{"href":"https://api.artsy.net/api/artworks/{id}","templated":true},"edition":{"href":"https://api.artsy.net/api/editions/{id}{?artwork_id}","templated":true},"tokens":{"href":"https://api.artsy.net/api/tokens"}}}'
     http_version: 
-  recorded_at: Wed, 31 Dec 2014 18:15:02 GMT
+  recorded_at: Mon, 12 Jan 2015 15:45:27 GMT
 - request:
     method: get
     uri: https://api.artsy.net/api/artists/pablo-picasso
@@ -523,7 +524,7 @@ http_interactions:
       Accept:
       - application/vnd.artsy-v2+json
       X-Xapp-Token:
-      - JvTPWe4WsQO-xqX6Bts49jiOpRNLY4AZe8oTj7EwHWopdD0uddCEwumjpTi-btEykT1GRijM-j5w0CJAZNXWZecCBhSsrD3kC0v4J9o8F4e76Qt6_ydSvFaBLoQ_8K7M6S4Sj0ybe34_WE10dK64oitlCVDJ2PCEaPxQSoQiI1jOcGVT7MSNlc-0jPKOrF5kMLsW7uvaelUq7y0gzcSVbg4KP7wwokULfYFxbcVXdXs=
+      - JvTPWe4WsQO-xqX6Bts49pwAqgkdjUbU-ydolFAGbIIQcABfQhxrBWAlULrRWpkWAvQWjNZgrEDA3V53fl9dXzL-MEpoVs5rT4M8_WhFmqO1pd5yKhgXyxSXZ-VrQZH8pQGUXJb-aY81sFhsCY8dhbejylTsMDtYVvXJaIUZ2O709_e6uy6RKNsnCg6HbmGUbjsRkikYa6LMCreB_m4sf_1TXpkpBWxNEIgQesznmGs=
       User-Agent:
       - Faraday v0.9.0
       Accept-Encoding:
@@ -538,7 +539,7 @@ http_interactions:
       Content-Type:
       - application/json
       Date:
-      - Wed, 31 Dec 2014 18:15:03 GMT
+      - Mon, 12 Jan 2015 15:45:24 GMT
       Location:
       - https://api.artsy.net/api/artists/4d8b928b4eb68a1b2c0001f2
       Server:
@@ -552,11 +553,11 @@ http_interactions:
       X-Frame-Options:
       - DENY
       X-Request-Id:
-      - bb91da19-20a3-4fe6-8822-f0cfefa38bb6
+      - 30f7e6c6-45d5-4768-84ce-e6bd7587379c
       X-Robots-Tag:
       - noindex
       X-Runtime:
-      - '0.020244'
+      - '0.019517'
       Content-Length:
       - '108'
       Connection:
@@ -565,7 +566,7 @@ http_interactions:
       encoding: UTF-8
       string: '{"_links":{"location":{"href":"https://api.artsy.net/api/artists/4d8b928b4eb68a1b2c0001f2"}}}'
     http_version: 
-  recorded_at: Wed, 31 Dec 2014 18:15:02 GMT
+  recorded_at: Mon, 12 Jan 2015 15:45:27 GMT
 - request:
     method: get
     uri: https://api.artsy.net/api/artists/4d8b928b4eb68a1b2c0001f2
@@ -578,7 +579,7 @@ http_interactions:
       Accept:
       - application/vnd.artsy-v2+json
       X-Xapp-Token:
-      - JvTPWe4WsQO-xqX6Bts49jiOpRNLY4AZe8oTj7EwHWopdD0uddCEwumjpTi-btEykT1GRijM-j5w0CJAZNXWZecCBhSsrD3kC0v4J9o8F4e76Qt6_ydSvFaBLoQ_8K7M6S4Sj0ybe34_WE10dK64oitlCVDJ2PCEaPxQSoQiI1jOcGVT7MSNlc-0jPKOrF5kMLsW7uvaelUq7y0gzcSVbg4KP7wwokULfYFxbcVXdXs=
+      - JvTPWe4WsQO-xqX6Bts49pwAqgkdjUbU-ydolFAGbIIQcABfQhxrBWAlULrRWpkWAvQWjNZgrEDA3V53fl9dXzL-MEpoVs5rT4M8_WhFmqO1pd5yKhgXyxSXZ-VrQZH8pQGUXJb-aY81sFhsCY8dhbejylTsMDtYVvXJaIUZ2O709_e6uy6RKNsnCg6HbmGUbjsRkikYa6LMCreB_m4sf_1TXpkpBWxNEIgQesznmGs=
       User-Agent:
       - Faraday v0.9.0
       Accept-Encoding:
@@ -593,9 +594,9 @@ http_interactions:
       Content-Type:
       - application/json
       Date:
-      - Wed, 31 Dec 2014 18:15:03 GMT
+      - Mon, 12 Jan 2015 15:45:25 GMT
       Etag:
-      - '"0a98930f6d778b5f1d54a2d1fc62131a"'
+      - '"95a5dd983670a7cf7b47ce8eb8b94fae"'
       Expires:
       - 1970-01-01 00:00:00 UTC
       Server:
@@ -609,13 +610,13 @@ http_interactions:
       X-Frame-Options:
       - DENY
       X-Request-Id:
-      - df6d274f-922c-4670-9d85-2756a2d317d7
+      - bce0a256-9248-409e-b5ff-9c01af4d8cd3
       X-Robots-Tag:
       - noindex
       X-Runtime:
-      - '0.026473'
+      - '0.019878'
       Content-Length:
-      - '2537'
+      - '2539'
       Connection:
       - keep-alive
     body:
@@ -623,7 +624,7 @@ http_interactions:
       string: !binary |-
         eyJpZCI6IjRkOGI5MjhiNGViNjhhMWIyYzAwMDFmMiIsImNyZWF0ZWRfYXQi
         OiIyMDEwLTA4LTAzVDE2OjA5OjMzKzAwOjAwIiwidXBkYXRlZF9hdCI6IjIw
-        MTQtMTItMzFUMTI6MTU6NDArMDA6MDAiLCJuYW1lIjoiUGFibG8gUGljYXNz
+        MTUtMDEtMTJUMDg6NDY6MzArMDA6MDAiLCJuYW1lIjoiUGFibG8gUGljYXNz
         byIsImdlbmRlciI6Im1hbGUiLCJiaXJ0aGRheSI6IjE4ODEiLCJob21ldG93
         biI6Ik3DoWxhZ2EsIFNwYWluIiwibG9jYXRpb24iOiJQYXJpcyBhbmQgTW91
         Z2lucywgRnJhbmNlIiwibmF0aW9uYWxpdHkiOiJTcGFuaXNoIiwic3RhdGVt
@@ -731,18 +732,19 @@ http_interactions:
         ez9pbWFnZV92ZXJzaW9ufS5qcGciLCJ0ZW1wbGF0ZWQiOnRydWV9LCJzZWxm
         Ijp7ImhyZWYiOiJodHRwczovL2FwaS5hcnRzeS5uZXQvYXBpL2FydGlzdHMv
         NGQ4YjkyOGI0ZWI2OGExYjJjMDAwMWYyIn0sInBlcm1hbGluayI6eyJocmVm
-        IjoiaHR0cDovL2FydHN5Lm5ldC9hcnRpc3QvcGFibG8tcGljYXNzbyJ9LCJh
-        cnR3b3JrcyI6eyJocmVmIjoiaHR0cHM6Ly9hcGkuYXJ0c3kubmV0L2FwaS9h
-        cnR3b3Jrcz9hcnRpc3RfaWQ9NGQ4YjkyOGI0ZWI2OGExYjJjMDAwMWYyIn0s
-        InNpbWlsYXJfYXJ0aXN0cyI6eyJocmVmIjoiaHR0cHM6Ly9hcGkuYXJ0c3ku
-        bmV0L2FwaS9hcnRpc3RzP3NpbWlsYXJfdG9fYXJ0aXN0X2lkPTRkOGI5Mjhi
-        NGViNjhhMWIyYzAwMDFmMiJ9LCJzaW1pbGFyX2NvbnRlbXBvcmFyeV9hcnRp
-        c3RzIjp7ImhyZWYiOiJodHRwczovL2FwaS5hcnRzeS5uZXQvYXBpL2FydGlz
-        dHM/c2ltaWxhcl90b19hcnRpc3RfaWQ9NGQ4YjkyOGI0ZWI2OGExYjJjMDAw
-        MWYyJnNpbWlsYXJpdHlfdHlwZT1jb250ZW1wb3JhcnkifSwiZ2VuZXMiOnsi
-        aHJlZiI6Imh0dHBzOi8vYXBpLmFydHN5Lm5ldC9hcGkvZ2VuZXM/YXJ0aXN0
-        X2lkPTRkOGI5MjhiNGViNjhhMWIyYzAwMDFmMiJ9fSwiaW1hZ2VfdmVyc2lv
-        bnMiOlsic3F1YXJlIiwidGFsbCIsImxhcmdlIiwiZm91cl90aGlyZHMiXX0=
+        IjoiaHR0cDovL3d3dy5hcnRzeS5uZXQvYXJ0aXN0L3BhYmxvLXBpY2Fzc28i
+        fSwiYXJ0d29ya3MiOnsiaHJlZiI6Imh0dHBzOi8vYXBpLmFydHN5Lm5ldC9h
+        cGkvYXJ0d29ya3M/YXJ0aXN0X2lkPTRkOGI5MjhiNGViNjhhMWIyYzAwMDFm
+        MiJ9LCJzaW1pbGFyX2FydGlzdHMiOnsiaHJlZiI6Imh0dHBzOi8vYXBpLmFy
+        dHN5Lm5ldC9hcGkvYXJ0aXN0cz9zaW1pbGFyX3RvX2FydGlzdF9pZD00ZDhi
+        OTI4YjRlYjY4YTFiMmMwMDAxZjIifSwic2ltaWxhcl9jb250ZW1wb3Jhcnlf
+        YXJ0aXN0cyI6eyJocmVmIjoiaHR0cHM6Ly9hcGkuYXJ0c3kubmV0L2FwaS9h
+        cnRpc3RzP3NpbWlsYXJfdG9fYXJ0aXN0X2lkPTRkOGI5MjhiNGViNjhhMWIy
+        YzAwMDFmMiZzaW1pbGFyaXR5X3R5cGU9Y29udGVtcG9yYXJ5In0sImdlbmVz
+        Ijp7ImhyZWYiOiJodHRwczovL2FwaS5hcnRzeS5uZXQvYXBpL2dlbmVzP2Fy
+        dGlzdF9pZD00ZDhiOTI4YjRlYjY4YTFiMmMwMDAxZjIifX0sImltYWdlX3Zl
+        cnNpb25zIjpbInNxdWFyZSIsInRhbGwiLCJsYXJnZSIsImZvdXJfdGhpcmRz
+        Il19
     http_version: 
-  recorded_at: Wed, 31 Dec 2014 18:15:02 GMT
+  recorded_at: Mon, 12 Jan 2015 15:45:27 GMT
 recorded_with: VCR 2.9.3
