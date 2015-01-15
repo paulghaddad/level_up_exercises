@@ -4,7 +4,7 @@
     @include font(body-bold);
     color: #d14836;
 
-    &::before {
+    &:before {
       content: "";
       position: absolute;
       left: 0;

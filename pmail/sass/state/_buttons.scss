@@ -1,17 +1,26 @@
-.red-button {
+.mailboxes button {
 
   &:active, &:hover {
     background: darken($orange-red, 5%);
   }
 }
 
-.email-controls button {
+.email-controls {
 
-  &:active, &:hover {
+  button:active, button:hover {
     border: 1px solid darken($dark-gray, 15%);
 
     use {
       fill: black;
     }
   }
+
+  .pagination-button {
+
+    &:active, &:hover {
+      border: none;
+    }
+  }
 }
+
+

@@ -16,26 +16,24 @@
   padding: .3rem;
 }
 
-.red-button {
-  @extend .button;
+.mailboxes button {
+  @include font-size(0.65);
+  @include font(body-bold);
   background: $orange-red;
   color: white;
   border: none;
   width: 7rem;
   text-transform: uppercase;
-  @include font-size(0.65);
-  @include font(body-bold);
 }
 
 .control-button {
   @extend .button;
+  @include font-size(0.7);
   background: $light-gray-gradient;
-  //border: 1px solid lighten($dark-gray, .8);
   @include border(lighten($dark-gray, .8));
   border-radius: 2px;
   padding: .4rem;
   margin-right: 0.8rem;
-  @include font-size(0.7);
 
   &:last-of-type {
     margin-right: 0;
@@ -59,11 +57,11 @@
 }
 
 .pagination-button {
+  @include font(body-bold);
+  @include font-size(.75);
   background: none;
   border: none;
   margin-right: 0;
-  @include font(body-bold);
-  @include font-size(.75);
 }
 
 .left-arrow-button {
